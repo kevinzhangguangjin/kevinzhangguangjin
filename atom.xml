@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>KevinZhang&#39;s Bolg</title>
+  
+  <subtitle>关于 机器学习 建模评分</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-07-25T07:21:17.327Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>KevinZhang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TensorFlow 升级到2.0，那么项目的1.x程序怎么办？</title>
+    <link href="http://yoursite.com/2019/07/25/tensorflow-2-0-how-to-do-with-your-code/"/>
+    <id>http://yoursite.com/2019/07/25/tensorflow-2-0-how-to-do-with-your-code/</id>
+    <published>2019-07-25T06:19:54.000Z</published>
+    <updated>2019-07-25T07:21:17.327Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;TensorFlow-升级到2-0，那么项目的1-x程序怎么办？&quot;&gt;&lt;a href=&quot;#TensorFlow-升级到2-0，那么项目的1-x程序怎么办？&quot; class=&quot;headerlink&quot; title=&quot;TensorFlow
+        
+      
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+</feed>
