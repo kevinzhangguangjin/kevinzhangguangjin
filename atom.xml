@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-25T07:21:17.327Z</updated>
+  <updated>2019-07-25T08:57:03.434Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Excel建立机器学习评分模型</title>
+    <link href="http://yoursite.com/2019/07/25/an-excel-machine-learning-approach-for-score-modeing/"/>
+    <id>http://yoursite.com/2019/07/25/an-excel-machine-learning-approach-for-score-modeing/</id>
+    <published>2019-07-25T08:54:19.000Z</published>
+    <updated>2019-07-25T08:57:03.434Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;使用Excel建立机器学习评分模型&quot;&gt;&lt;a href=&quot;#使用Excel建立机器学习评分模型&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>TensorFlow 升级到2.0，那么项目的1.x程序怎么办？</title>

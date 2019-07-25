@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>使用Excel建立机器学习评分模型</title>
+      <link href="/2019/07/25/an-excel-machine-learning-approach-for-score-modeing/"/>
+      <url>/2019/07/25/an-excel-machine-learning-approach-for-score-modeing/</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用Excel建立机器学习评分模型"><a href="#使用Excel建立机器学习评分模型" class="headerlink" title="使用Excel建立机器学习评分模型"></a>使用Excel建立机器学习评分模型</h1><p>准备写一份材料关于《使用Excel建立机器学习评分模型》，成型的Excel模板已经有了（笔者自己开发的），具体的一些效果截屏见文末。就是不知道有多少人愿意了解？</p><p>以下是材料大纲：</p><h2 id="为什么使用Excel"><a href="#为什么使用Excel" class="headerlink" title="为什么使用Excel"></a>为什么使用Excel</h2><ul><li><p>Excel的普遍性</p><blockquote><p>微软：2016年3月Office用户量超12亿</p></blockquote><p>根据微软官方公布的数字显示，Office的全球用户量达到了12亿，而Excel是Office中常用的套件工具。</p></li><li><p>计算性能</p><blockquote><p>Office Excel 2016 中包含 100 万行和 16,000 列的“大网格”，加上多项其他上限被调高，与 Excel 先前版本相比极大地增加了你可创建的工作表的大小。 Excel 中单个工作表可包含的单元格数现达到先前版本的 1,000 倍以上。</p></blockquote><p>本案例需要 Office 2007 或以上版本。</p></li><li><p>其他优点</p><ul><li><p>不用写代码</p><p>没有代码编程要求，只需要理解公式</p></li><li><p>更直观</p><p>Excel自带的表格以及图表能更清晰展示数据和模型</p></li><li><p>解释性强</p><p>案例采用Logistic Regression算法，并结合评分模型方法论。该方法论完整贯穿并展示模型的有效性、区分度、稳定性。数据变量对模型的贡献，以及能结合实际商业业务的理解。</p></li></ul></li><li><p>文章范围</p><ul><li><p>使用一个数据案例</p><p>拟采用GermanCredit数据集（文末截屏是另外一个数据集）</p></li><li><p>全部使用Excel实现模型建立过程</p><p>不需要额外的软件辅助，建模全流程都在Excel内完成</p></li></ul></li></ul><h2 id="关于Logistic-Regression"><a href="#关于Logistic-Regression" class="headerlink" title="关于Logistic Regression"></a>关于Logistic Regression</h2><ul><li>线性模型</li><li>Logistic Regression</li></ul><h2 id="Excel-步骤实现"><a href="#Excel-步骤实现" class="headerlink" title="Excel 步骤实现"></a>Excel 步骤实现</h2><ul><li>模型方法论<ul><li>Binning</li><li>WOE</li><li>IV</li><li>Odds</li><li>KS</li></ul></li><li>理解数据</li><li>观察数据</li><li>建模步骤</li></ul><h2 id="模型监控"><a href="#模型监控" class="headerlink" title="模型监控"></a>模型监控</h2><ul><li>PSI</li><li>排序性</li></ul><p>无图无真相：</p><ul><li><p>可以交互看到Binning表现</p><p><img src="/images/image-20190725164506141.png" alt></p></li><li><p>可以看到评分结果评价</p><p><img src="/images/image-20190725164744585.png" alt></p></li><li><p>按照标准评分卡参数设置，得到的变量每个属性的分</p><p><img src="/images/image-20190725164948390.png" alt></p></li></ul><p>还有别的一些特点没有放出来，看大家有没有兴趣了。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> machine learning </tag>
+            
+            <tag> 机器学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>TensorFlow 升级到2.0，那么项目的1.x程序怎么办？</title>
       <link href="/2019/07/25/tensorflow-2-0-how-to-do-with-your-code/"/>
       <url>/2019/07/25/tensorflow-2-0-how-to-do-with-your-code/</url>
