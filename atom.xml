@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>KevinZhang&#39;s Bolg</title>
+  <title>KevinZhang&#39;s Blog</title>
   
   <subtitle>关于 机器学习 建模评分</subtitle>
   <link href="/atom.xml" rel="self"/>
