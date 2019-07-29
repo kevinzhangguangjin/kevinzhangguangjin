@@ -4,11 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="使用Excel建立机器学习评分模型, machine learning, 机器学习, modeling, 建模, scoring, 评分">
-    <meta name="description" content="使用Excel建立机器学习评分模型准备写一份材料关于《使用Excel建立机器学习评分模型》，成型的Excel模板已经有了（笔者自己开发的），具体的一些效果截屏见文末。就是不知道有多少人愿意了解？
-以下是材料大纲：
-为什么使用Excel
-Ex">
+    <meta name="keywords" content="SAS中如何通过决策树选择重要入选变量, machine learning, 机器学习, modeling, 建模, scoring, 评分">
+    <meta name="description" content="SAS中如何通过决策树选择重要入选变量以下在SAS的EM中通过一个案例来说明决策树选择重要变量的过程：
+整体流程图
+上图中从左到右分别为步骤1-4，其中步骤4是神经网络，其实不重要，重要的是前3步，第4步可以是其他节点。
+选择案例数据
+插入">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +17,7 @@ Ex">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>使用Excel建立机器学习评分模型 | KevinZhang&#39;s Blog</title>
+    <title>SAS中如何通过决策树选择重要入选变量 | KevinZhang&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -195,13 +196,13 @@ Ex">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        使用Excel建立机器学习评分模型
+                        SAS中如何通过决策树选择重要入选变量
                     </div>
                 </div>
             </div>
@@ -320,6 +321,10 @@ Ex">
                                 <span class="chip bg-color">机器学习</span>
                             </a>
                         
+                            <a href="/tags/SAS/" target="_blank">
+                                <span class="chip bg-color">SAS</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -331,7 +336,7 @@ Ex">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-25
+                    2019-07-29
                 </div>
 
                 
@@ -347,79 +352,20 @@ Ex">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="使用Excel建立机器学习评分模型"><a href="#使用Excel建立机器学习评分模型" class="headerlink" title="使用Excel建立机器学习评分模型"></a>使用Excel建立机器学习评分模型</h1><p>准备写一份材料关于《使用Excel建立机器学习评分模型》，成型的Excel模板已经有了（笔者自己开发的），具体的一些效果截屏见文末。就是不知道有多少人愿意了解？</p>
-<p>以下是材料大纲：</p>
-<h2 id="为什么使用Excel"><a href="#为什么使用Excel" class="headerlink" title="为什么使用Excel"></a>为什么使用Excel</h2><ul>
-<li><p>Excel的普遍性</p>
-<blockquote>
-<p>微软：2016年3月Office用户量超12亿</p>
-</blockquote>
-<p>根据微软官方公布的数字显示，Office的全球用户量达到了12亿，而Excel是Office中常用的套件工具。</p>
-</li>
-<li><p>计算性能</p>
-<blockquote>
-<p>Office Excel 2016 中包含 100 万行和 16,000 列的“大网格”，加上多项其他上限被调高，与 Excel 先前版本相比极大地增加了你可创建的工作表的大小。 Excel 中单个工作表可包含的单元格数现达到先前版本的 1,000 倍以上。</p>
-</blockquote>
-<p>本案例需要 Office 2007 或以上版本。</p>
-</li>
-<li><p>其他优点</p>
-<ul>
-<li><p>不用写代码</p>
-<p>没有代码编程要求，只需要理解公式</p>
-</li>
-<li><p>更直观</p>
-<p>Excel自带的表格以及图表能更清晰展示数据和模型</p>
-</li>
-<li><p>解释性强</p>
-<p>案例采用Logistic Regression算法，并结合评分模型方法论。该方法论完整贯穿并展示模型的有效性、区分度、稳定性。数据变量对模型的贡献，以及能结合实际商业业务的理解。</p>
-</li>
-</ul>
-</li>
-<li><p>文章范围</p>
-<ul>
-<li><p>使用一个数据案例</p>
-<p>拟采用GermanCredit数据集（文末截屏是另外一个数据集）</p>
-</li>
-<li><p>全部使用Excel实现模型建立过程</p>
-<p>不需要额外的软件辅助，建模全流程都在Excel内完成</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="关于Logistic-Regression"><a href="#关于Logistic-Regression" class="headerlink" title="关于Logistic Regression"></a>关于Logistic Regression</h2><ul>
-<li>线性模型</li>
-<li>Logistic Regression</li>
-</ul>
-<h2 id="Excel-步骤实现"><a href="#Excel-步骤实现" class="headerlink" title="Excel 步骤实现"></a>Excel 步骤实现</h2><ul>
-<li>模型方法论<ul>
-<li>Binning</li>
-<li>WOE</li>
-<li>IV</li>
-<li>Odds</li>
-<li>KS</li>
-</ul>
-</li>
-<li>理解数据</li>
-<li>观察数据</li>
-<li>建模步骤</li>
-</ul>
-<h2 id="模型监控"><a href="#模型监控" class="headerlink" title="模型监控"></a>模型监控</h2><ul>
-<li>PSI</li>
-<li>排序性</li>
-</ul>
-<p>无图无真相：</p>
-<ul>
-<li><p>可以交互看到Binning表现</p>
-<p><img src="/images/image-20190725164506141.png" alt></p>
-</li>
-<li><p>可以看到评分结果评价</p>
-<p><img src="/images/image-20190725164744585.png" alt></p>
-</li>
-<li><p>按照标准评分卡参数设置，得到的变量每个属性的分</p>
-<p><img src="/images/image-20190725164948390.png" alt></p>
-</li>
-</ul>
-<p>还有别的一些特点没有放出来，看大家有没有兴趣了。</p>
+                <h1 id="SAS中如何通过决策树选择重要入选变量"><a href="#SAS中如何通过决策树选择重要入选变量" class="headerlink" title="SAS中如何通过决策树选择重要入选变量"></a>SAS中如何通过决策树选择重要入选变量</h1><p>以下在SAS的EM中通过一个案例来说明决策树选择重要变量的过程：</p>
+<h2 id="整体流程图"><a href="#整体流程图" class="headerlink" title="整体流程图"></a>整体流程图</h2><p><img src="/images/image-20190729171250162.png" alt></p>
+<p>上图中从左到右分别为步骤1-4，其中步骤4是神经网络，其实不重要，重要的是前3步，第4步可以是其他节点。</p>
+<h2 id="选择案例数据"><a href="#选择案例数据" class="headerlink" title="选择案例数据"></a>选择案例数据</h2><p><img src="/images/image-20190729171524119.png" alt></p>
+<p>插入<code>Input Data Source</code> 节点，选择<code>SAMPSIO.HMEQ</code>作为源数据，并点<code>Change</code>钩上<code>Use complete data as sample</code>选择全部数据用作后续操作。</p>
+<h2 id="设置训练、验证数据比例"><a href="#设置训练、验证数据比例" class="headerlink" title="设置训练、验证数据比例"></a>设置训练、验证数据比例</h2><p><img src="/images/image-20190729172417734.png" alt></p>
+<p>训练：67%，验证：33%</p>
+<h2 id="决策树设置"><a href="#决策树设置" class="headerlink" title="决策树设置"></a>决策树设置</h2><p><img src="/images/image-20190729172732498.png" alt></p>
+<p>打开决策树设置，唯一要更改的是上图中圈红的地方，从0改成2（备选规则存储）。</p>
+<p>然后关闭后运行决策树，运行结束后右键查看决策树结果：</p>
+<p><img src="/images/image-20190729170941079.png" alt></p>
+<p>在<code>Score</code>页面中子页面<code>Variable Selection</code>中可以看到变量的重要性排序。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>好处是先把作用不大的变量直接筛选掉，跟在这个决策树后面的节点默认会排除掉决策树中已经<code>rejected</code>的变量。</p>
+<p>如果变量特别多的时候，这种方法特别有效。</p>
 
             </div>
             <hr/>
@@ -454,9 +400,9 @@ Ex">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《使用Excel建立机器学习评分模型》
+                    《SAS中如何通过决策树选择重要入选变量》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/25/an-excel-machine-learning-approach-for-score-modeing/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/29/how-sas-em-select-important-variables-by-decision-tree/" property="cc:attributionName"
                rel="cc:attributionURL">
                 KevinZhang
             </a> 采用
@@ -518,9 +464,10 @@ Ex">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/07/29/how-sas-em-select-important-variables-by-decision-tree/">
                     <div class="card-image">
@@ -542,9 +489,9 @@ Ex">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -553,6 +500,7 @@ Ex">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -579,18 +527,22 @@ Ex">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/25/tensorflow-2-0-how-to-do-with-your-code/">
+                <a href="/2019/07/25/an-excel-machine-learning-approach-for-score-modeing/">
                     <div class="card-image">
                         
-                        <img src="images/tensorflow_1200x500.gif" class="responsive-img" alt="TensorFlow 升级到2.0，那么项目的1.x程序怎么办？">
                         
-                        <span class="card-title">TensorFlow 升级到2.0，那么项目的1.x程序怎么办？</span>
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="使用Excel建立机器学习评分模型">
+                        
+                        <span class="card-title">使用Excel建立机器学习评分模型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            TensorFlow 升级到2.0，那么项目的1.x程序怎么办？目前，Tensorflow库正在经历着从推出以来最大规模的变化。TensorFLow 2.0 已经推出 beta 版本，同 TensorFlow 1.x 版本相比它带来了太多的
+                            使用Excel建立机器学习评分模型准备写一份材料关于《使用Excel建立机器学习评分模型》，成型的Excel模板已经有了（笔者自己开发的），具体的一些效果截屏见文末。就是不知道有多少人愿意了解？
+以下是材料大纲：
+为什么使用Excel
+Ex
                         
                     </div>
                     <div class="publish-info">
