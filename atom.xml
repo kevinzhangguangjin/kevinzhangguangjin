@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-29T09:37:39.200Z</updated>
+  <updated>2019-08-05T11:25:34.831Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github Trending and Good Stuff 2019-08-05</title>
+    <link href="http://yoursite.com/2019/08/05/github-trending-and-good-stuff-2019-08-05/"/>
+    <id>http://yoursite.com/2019/08/05/github-trending-and-good-stuff-2019-08-05/</id>
+    <published>2019-08-05T11:16:14.000Z</published>
+    <updated>2019-08-05T11:25:34.831Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;python&quot;&gt;&lt;a href=&quot;#python&quot; class=&quot;headerlink&quot; title=&quot;python&quot;&gt;&lt;/a&gt;python&lt;/h3&gt;&lt;h4 id=&quot;wistbean-learn-python3-spider&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
+    
+      <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
+    
+      <category term="相关材料" scheme="http://yoursite.com/tags/%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99/"/>
+    
+  </entry>
   
   <entry>
     <title>SAS中如何通过决策树选择重要入选变量</title>
