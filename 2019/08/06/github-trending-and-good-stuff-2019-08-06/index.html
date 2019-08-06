@@ -1,0 +1,949 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Github Trending and Good Stuff 2019-08-06, machine learning, 机器学习, modeling, 建模, scoring, 评分">
+    <meta name="description" content="jupyter-notebookjustmarkham / pandas-videosJupyter notebook and datasets from the pandas Q&amp;amp;A video series  Good Stuf">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Github Trending and Good Stuff 2019-08-06 | KevinZhang&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">KevinZhang's Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">KevinZhang's Blog</div>
+        <div class="logo-desc">
+            
+            非著名数据分析师
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Github Trending and Good Stuff 2019-08-06
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/machine-learning/" target="_blank">
+                                <span class="chip bg-color">machine learning</span>
+                            </a>
+                        
+                            <a href="/tags/机器学习/" target="_blank">
+                                <span class="chip bg-color">机器学习</span>
+                            </a>
+                        
+                            <a href="/tags/Github-Trending/" target="_blank">
+                                <span class="chip bg-color">Github Trending</span>
+                            </a>
+                        
+                            <a href="/tags/good-stuff/" target="_blank">
+                                <span class="chip bg-color">good stuff</span>
+                            </a>
+                        
+                            <a href="/tags/相关材料/" target="_blank">
+                                <span class="chip bg-color">相关材料</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-08-06
+                </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="jupyter-notebook"><a href="#jupyter-notebook" class="headerlink" title="jupyter-notebook"></a>jupyter-notebook</h3><h4 id="justmarkham-pandas-videos"><a href="#justmarkham-pandas-videos" class="headerlink" title="justmarkham / pandas-videos"></a><a href="https://github.com/justmarkham/pandas-videos" target="_blank" rel="noopener">justmarkham / pandas-videos</a></h4><p>Jupyter notebook and datasets from the pandas Q&amp;A video series<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="data/ufo.csv">ufo.csv</a> | Reports of UFO sightings from 1930-2000 | <a href="http://bit.ly/uforeports" target="_blank" rel="noopener">bit.ly/uforeports</a> | <a href="http://www.nuforc.org/webreports.html" target="_blank" rel="noopener">National UFO Reporting Center</a> | <a href="https://github.com/josiahdavis/josiahdavis.github.io/blob/master/supporting%20material/get_ufo_data.py" target="_blank" rel="noopener">Web scraping script</a></li>
+</ul>
+<h4 id="dibgerge-ml-coursera-python-assignments"><a href="#dibgerge-ml-coursera-python-assignments" class="headerlink" title="dibgerge / ml-coursera-python-assignments"></a><a href="https://github.com/dibgerge/ml-coursera-python-assignments" target="_blank" rel="noopener">dibgerge / ml-coursera-python-assignments</a></h4><p>Python assignments for the machine learning class by andrew ng on coursera with complete submission for grading capability and re-written instructions.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="http://cs231n.github.io/python-numpy-tutorial/" target="_blank" rel="noopener">Numpy and matplotlib tutorial</a>: We will be using numpy extensively for matrix and vector operations. This is great tutorial to get you started with using numpy and matplotlib for plotting.</li>
+</ul>
+<h3 id="python"><a href="#python" class="headerlink" title="python"></a>python</h3><h4 id="ddbourgin-numpy-ml"><a href="#ddbourgin-numpy-ml" class="headerlink" title="ddbourgin / numpy-ml"></a><a href="https://github.com/ddbourgin/numpy-ml" target="_blank" rel="noopener">ddbourgin / numpy-ml</a></h4><p>Machine learning, in numpy<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://scipy.github.io/devdocs/" target="_blank" rel="noopener">SciPy library</a> is also permitted under special</li>
+</ul>
+<h4 id="zalandoresearch-fashion-mnist"><a href="#zalandoresearch-fashion-mnist" class="headerlink" title="zalandoresearch / fashion-mnist"></a><a href="https://github.com/zalandoresearch/fashion-mnist" target="_blank" rel="noopener">zalandoresearch / fashion-mnist</a></h4><p>A MNIST-like fashion product database. Benchmark<br>👉<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><ul>
+<li><h2 id="Fashion-MNIST-Year-in-Review"><a href="#Fashion-MNIST-Year-in-Review" class="headerlink" title="Fashion-MNIST: Year in Review"></a><a href="https://hanxiao.github.io/2018/09/28/Fashion-MNIST-Year-In-Review/" target="_blank" rel="noopener">Fashion-MNIST: Year in Review</a></h2></li>
+</ul>
+</li>
+<li><a href="https://reiinakano.github.io/gan-playground/" target="_blank" rel="noopener">GAN Playground - Explore Generative Adversarial Nets in your Browser</a></li>
+</ul>
+<h3 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h3><h4 id="Toxblh-MTMR"><a href="#Toxblh-MTMR" class="headerlink" title="Toxblh / MTMR"></a><a href="https://github.com/Toxblh/MTMR" target="_blank" rel="noopener">Toxblh / MTMR</a></h4><p>🌟<br>[My TouchBar My rules]. The TouchBar Customisation App for your MacBook Pro<br>  <strong>Release</strong></p>
+<ul>
+<li>Download lastest <a href="https://github.com/Toxblh/MTMR/releases" target="_blank" rel="noopener">release</a> (.dmg) from github</li>
+</ul>
+<h4 id="apple-swift-nio"><a href="#apple-swift-nio" class="headerlink" title="apple / swift-nio"></a><a href="https://github.com/apple/swift-nio" target="_blank" rel="noopener">apple / swift-nio</a></h4><p>Event-driven network application framework for high performance protocol servers &amp; clients, non-blocking.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>Currently SwiftNIO ships with three <code>Bootstrap</code> objects: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/ServerBootstrap.html" target="_blank" rel="noopener"><code>ServerBootstrap</code></a>, for bootstrapping listening channels; <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/ClientBootstrap.html" target="_blank" rel="noopener"><code>ClientBootstrap</code></a>, for bootstrapping client TCP channels; and <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/DatagramBootstrap.html" target="_blank" rel="noopener"><code>DatagramBootstrap</code></a> for bootstrapping UDP channels.</li>
+<li><ul>
+<li><a href="https://apple.github.io/swift-nio/docs/current/NIO/index.html" target="_blank" rel="noopener">API documentation</a></li>
+</ul>
+</li>
+<li>[ch]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Protocols/ChannelHandler.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Protocols/ChannelHandler.html</a></li>
+<li>[c]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Protocols/Channel.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Protocols/Channel.html</a></li>
+<li>[chc]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/ChannelHandlerContext.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/ChannelHandlerContext.html</a></li>
+<li>[ec]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/EmbeddedChannel.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/EmbeddedChannel.html</a></li>
+<li>[el]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Protocols/EventLoop.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Protocols/EventLoop.html</a></li>
+<li>[eel]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/EmbeddedEventLoop.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/EmbeddedEventLoop.html</a></li>
+<li>[elg]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Protocols/EventLoopGroup.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Protocols/EventLoopGroup.html</a></li>
+<li>[bb]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Structs/ByteBuffer.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Structs/ByteBuffer.html</a></li>
+<li>[elf]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/EventLoopFuture.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/EventLoopFuture.html</a></li>
+<li>[elp]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Structs/EventLoopPromise.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Structs/EventLoopPromise.html</a></li>
+<li>[cp]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/ChannelPipeline.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/ChannelPipeline.html</a></li>
+<li>[mtelg]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/MultiThreadedEventLoopGroup.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/MultiThreadedEventLoopGroup.html</a></li>
+</ul>
+<h4 id="LoopKit-Loop"><a href="#LoopKit-Loop" class="headerlink" title="LoopKit / Loop"></a><a href="https://github.com/LoopKit/Loop" target="_blank" rel="noopener">LoopKit / Loop</a></h4><p>An automated insulin delivery app template for iOS, built on LoopKit<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>Please visit the <a href="https://loopkit.github.io/loopdocs/" target="_blank" rel="noopener">Loop Docs</a> for installation, algorithm, and other details.</li>
+</ul>
+<h4 id="ReSwift-ReSwift"><a href="#ReSwift-ReSwift" class="headerlink" title="ReSwift / ReSwift"></a><a href="https://github.com/ReSwift/ReSwift" target="_blank" rel="noopener">ReSwift / ReSwift</a></h4><p>Unidirectional Data Flow in Swift - Inspired by Redux<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>You would also define two actions, one for increasing and one for decreasing the counter. In the <a href="http://reswift.github.io/ReSwift/master/getting-started-guide.html" target="_blank" rel="noopener">Getting Started Guide</a> you can find out how to construct complex actions. For the simple actions in this example we can define empty structs that conform to action:</li>
+<li><a href="http://reswift.github.io/ReSwift/master/getting-started-guide.html" target="_blank" rel="noopener">A Getting Started Guide that describes the core components of apps built with ReSwift lives here</a>.</li>
+</ul>
+<h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><h4 id="sahat-hackathon-starter"><a href="#sahat-hackathon-starter" class="headerlink" title="sahat / hackathon-starter"></a><a href="https://github.com/sahat/hackathon-starter" target="_blank" rel="noopener">sahat / hackathon-starter</a></h4><p>A boilerplate for Node.js web applications<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="http://todc.github.io/todc-bootstrap/" target="_blank" rel="noopener">Google Bootstrap</a> - Google-styled theme for Bootstrap.</li>
+<li><a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank" rel="noopener">Font Awesome Icons</a> - It’s already part of the Hackathon Starter, so use this page as a reference.</li>
+<li><a href="http://vitalets.github.io/x-editable/" target="_blank" rel="noopener">X-editable</a> - Edit form elements inline.</li>
+<li><a href="http://fabien-d.github.io/alertify.js/" target="_blank" rel="noopener">Alertify.js</a> - Sweet looking alerts and browser dialogs.</li>
+<li><a href="http://selectize.github.io/selectize.js" target="_blank" rel="noopener">selectize.js</a> - Styleable select elements and input tags.</li>
+<li><a href="http://timstermatic.github.io/blog/2013/08/17/a-simple-mvc-framework-with-node-and-express/" target="_blank" rel="noopener">blog</a>,</li>
+<li><a href="https://ibm-bluemix.github.io/" target="_blank" rel="noopener">More Bluemix samples</a></li>
+</ul>
+<h4 id="ksky521-nodeppt"><a href="#ksky521-nodeppt" class="headerlink" title="ksky521 / nodeppt"></a><a href="https://github.com/ksky521/nodeppt" target="_blank" rel="noopener">ksky521 / nodeppt</a></h4><p>This is probably the best web presentation tool so far!<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>plugins：目前支持 <a href="https://echarts.baidu.com/" target="_blank" rel="noopener">echarts</a>，<a href="https://mermaidjs.github.io/" target="_blank" rel="noopener">mermaid</a>和 <a href="https://katex.org" target="_blank" rel="noopener">katex</a> 三个插件</li>
+<li>目前 nodeppt 支持 <a href="https://echarts.baidu.com/" target="_blank" rel="noopener">图表 echarts</a>，<a href="https://mermaidjs.github.io/" target="_blank" rel="noopener">流程图 mermaid</a>，<a href="https://katex.org" target="_blank" rel="noopener">数学符号 KaTeX</a> 三个插件。</li>
+</ul>
+<h4 id="Kickball-awesome-selfhosted"><a href="#Kickball-awesome-selfhosted" class="headerlink" title="Kickball / awesome-selfhosted"></a><a href="https://github.com/Kickball/awesome-selfhosted" target="_blank" rel="noopener">Kickball / awesome-selfhosted</a></h4><p>This is a list of Free Software network services and web applications which can be hosted locally. Selfhosting is the process of locally hosting and managing applications instead of renting from SaaS providers.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="http://www.alltubedownload.net" target="_blank" rel="noopener">Alltube</a> - Web interface for <a href="https://github.com/rg3/youtube-dl" target="_blank" rel="noopener">youtube-dl</a>, a program to download videos and audio from <a href="https://rg3.github.io/youtube-dl/supportedsites.html" target="_blank" rel="noopener">more than 100 websites</a> (<a href="https://github.com/Rudloff/alltube" target="_blank" rel="noopener">Source Code</a>) <code>GPL-3.0</code> <code>PHP</code></li>
+<li><a href="https://github.com/Binnette/homebank-converter" target="_blank" rel="noopener">homebank-converter</a> - Web app to convert an export bank file to compatible Homebank csv. (<a href="http://binnette.github.io/homebank-converter/" target="_blank" rel="noopener">Demo</a>) <code>AGPL-3.0</code> <code>HTML5</code></li>
+<li><a href="https://kibitzr.github.io" target="_blank" rel="noopener">Kibitzr</a> - Lightweight personal web assistant with powerful integrations. (<a href="https://github.com/kibitzr/kibitzr" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Python</code></li>
+<li><a href="http://sickrage.github.io/" target="_blank" rel="noopener">SickRage</a> - SickRage is an automatic Video Library Manager for TV Shows. Automatic torrent/nzb searching, downloading, and processing at the qualities you want. (<a href="https://github.com/SickRage/SickRage" target="_blank" rel="noopener">Source Code</a>) <code>GPL-3.0</code> <code>Python</code></li>
+<li><a href="https://github.com/ziahamza/webui-aria2" target="_blank" rel="noopener">WebUI-aria2</a> - Interface to interact with the aria2 downloader. Very simple to use, just download and open index.html in any web browser. (<a href="http://ziahamza.github.io/webui-aria2/" target="_blank" rel="noopener">Demo</a>) <code>MIT</code> <code>HTML5</code></li>
+<li><a href="http://moose-team.github.io/friends/" target="_blank" rel="noopener">Friends</a> - P2P chat powered by the web. (<a href="https://github.com/moose-team/friends" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Nodejs</code></li>
+<li><a href="http://sdelements.github.io/lets-chat/" target="_blank" rel="noopener">Lets-Chat</a> - Self hosted chat suite written in Node. (<a href="https://github.com/sdelements/lets-chat" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Nodejs</code></li>
+<li><a href="http://haraka.github.io/" target="_blank" rel="noopener">Haraka</a> - High-performance, pluginable SMTP server written in Javascript. (<a href="https://github.com/haraka/Haraka" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Javascript</code></li>
+<li><a href="https://thelounge.github.io/" target="_blank" rel="noopener">The Lounge</a> - A self-hosted web IRC client. (<a href="https://demo.thelounge.chat/" target="_blank" rel="noopener">Demo</a>, <a href="https://github.com/thelounge/lounge" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Nodejs</code></li>
+<li><a href="https://github.com/dyu/comments" target="_blank" rel="noopener">dyu/comments</a> - Real-time, markdown-enabled comment engine powered by leveldb. (<a href="https://dyu.github.io/comments/real-time/" target="_blank" rel="noopener">Demo</a>) <code>Apache-2.0</code> <code>Java</code></li>
+<li><a href="http://candy-chat.github.io/candy/" target="_blank" rel="noopener">Candy</a> - Multi user XMPP client written in Javascript. (<a href="https://github.com/candy-chat/candy" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Javascript</code></li>
+<li><a href="https://frab.github.io/frab/" target="_blank" rel="noopener">frab</a> - web-based conference planning and management system. It helps to collect submissions, to manage talks and speakers and to create a schedule. (<a href="https://github.com/frab/frab" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Ruby</code></li>
+<li><a href="https://github.com/open-eats/OpenEats" target="_blank" rel="noopener">OpenEats</a> - Recipe management site that allows users to create, store, share and rate recipes, create grocery lists, and more. (<a href="https://open-eats.github.io/" target="_blank" rel="noopener">Demo</a>) <code>MIT</code> <code>Python</code></li>
+<li><a href="https://oupala.github.io/apaxy/" target="_blank" rel="noopener">Apaxy</a> - Theme built to enhance the experience of browsing web directories, using the mod_autoindex Apache module and some CSS to override the default style of a directory listing. (<a href="https://github.com/AdamWhitcroft/Apaxy" target="_blank" rel="noopener">Source Code</a>) <code>Unlicense</code> <code>HTML</code></li>
+<li><a href="https://soyuka.github.io/explorer/" target="_blank" rel="noopener">explorer</a> - Highly-configurable directory listing made with nodejs. (<a href="https://github.com/soyuka/explorer" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Nodejs</code></li>
+<li><a href="https://github.com/ellisonleao/clumsy-bird" target="_blank" rel="noopener">Clumsy Bird</a> - MelonJS port of the famous Flappy Bird Game. (<a href="http://ellisonleao.github.io/clumsy-bird/" target="_blank" rel="noopener">Demo</a>) <code>MIT</code> <code>Nodejs</code></li>
+<li><a href="https://sbpp.github.io" target="_blank" rel="noopener">SourceBans++</a> - Admin, ban, and communication management system for games running on the Source engine. (<a href="https://github.com/sbpp/sourcebans-pp" target="_blank" rel="noopener">Source Code</a>) <code>CC-BY-SA-4.0</code> <code>PHP</code></li>
+<li><a href="https://github.com/ondras/my-mind" target="_blank" rel="noopener">My Mind</a> - Web application for creating and managing mind maps. (<a href="https://my-mind.github.io/?url=examples%2Ffeatures.mymind" target="_blank" rel="noopener">Demo</a>) <code>MIT</code> <code>Javascript</code></li>
+<li><a href="https://github.com/LINKIWI/orion-web" target="_blank" rel="noopener">Orion</a> - Powerful OwnTracks API-compliant location data visualization frontend for the web. (<a href="https://linkiwi.github.io/orion-web/" target="_blank" rel="noopener">Demo</a>) <code>MIT</code> <code>Python/Nodejs</code></li>
+<li><a href="https://macosforge.github.io/dss/" target="_blank" rel="noopener">Darwin Streaming Server</a> - High performance server for streaming QuickTime and MPEG-4 media over RTP and RTSP protocols. Originated as Apple’s QTSS. (<a href="https://github.com/macosforge/dss" target="_blank" rel="noopener">Source Code</a>) <code>APSL-2.0</code> <code>C++</code></li>
+<li><a href="https://airsonic.github.io/" target="_blank" rel="noopener">Airsonic</a> - Open-source web-based media streamer and jukebox. A fork of Subsonic’s last open-source release, before it switched licenses. (<a href="https://github.com/airsonic/airsonic" target="_blank" rel="noopener">Source Code</a>, <a href="https://airsonic.github.io/docs/apps/" target="_blank" rel="noopener">Clients</a>) <code>GPL-3.0</code> <code>Java</code></li>
+<li><a href="https://datarhei.github.io/restreamer/" target="_blank" rel="noopener">Restreamer</a> - Restreamer allows you to do h.264 real-time video streaming on your website without a streaming provider. (<a href="https://github.com/datarhei/restreamer" target="_blank" rel="noopener">Source Code</a>) <code>Apache-2.0</code> <code>Nodejs/Docker</code></li>
+<li><a href="https://beancount.github.io/fava/" target="_blank" rel="noopener">Fava</a> - Fava is the web frontend of Beancount, a text based double-entry accounting system. (<a href="https://fava.pythonanywhere.com/example-with-budgets/income_statement/" target="_blank" rel="noopener">Demo</a>, <a href="https://github.com/beancount/fava" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Python</code></li>
+<li><a href="https://github.com/FoxUSA/OpenNote" target="_blank" rel="noopener">OpenNote</a> - OpenNote was built to be an open web-based alternative to Microsoft OneNote (T) and EverNote. (<a href="https://foxusa.github.io/OpenNote/OpenNote/#/folder" target="_blank" rel="noopener">Demo</a>) <code>MIT</code> <code>HTML5</code></li>
+<li><a href="https://domchristie.github.io/turndown/" target="_blank" rel="noopener">turndown</a> - HTML to Markdown converter written in JavaScript. (<a href="https://github.com/domchristie/turndown" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Javascript</code></li>
+<li><a href="https://snibox.github.io/" target="_blank" rel="noopener">Snibox</a> - Code snippets manager with attractive tag-oriented interface. (<a href="https://snibox-demo.herokuapp.com/" target="_blank" rel="noopener">Demo</a>, <a href="https://github.com/snibox/snibox" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Ruby</code></li>
+<li><a href="https://github.com/Swagielka/simple-dash" target="_blank" rel="noopener">simple-dash</a> - A simple, fully responsive Dashboard to forward to the services of your choice. (<a href="https://swagielka.github.io/simple-dash/" target="_blank" rel="noopener">Demo</a>) <code>MIT</code> <code>Javascript</code></li>
+<li><a href="https://benschwarz.github.io/gallery-css/" target="_blank" rel="noopener">Gallery CSS</a> - Gallery.css is all CSS. Think: Simple, maintainable and understandable galleries without the use of Javascript. (<a href="https://github.com/benschwarz/gallery-css" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>CSS</code></li>
+<li><a href="https://lycheeorg.github.io/" target="_blank" rel="noopener">Lychee</a> - Open source grid and album based photo-management-system. (<a href="https://github.com/LycheeOrg/Lychee" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>PHP</code></li>
+<li><a href="https://joshdick.github.io/miniProxy/" target="_blank" rel="noopener">miniProxy</a> - Simple web proxy written in PHP that can allow you to bypass Internet content filters, or to browse the internet anonymously. Only one php file. (<a href="https://github.com/joshdick/miniProxy" target="_blank" rel="noopener">Source Code</a>) <code>GPL-3.0</code> <code>PHP</code></li>
+<li><a href="https://swiperproxy.github.io/" target="_blank" rel="noopener">Swiperproxy</a> - Lightning-fast, open source web proxy that is easy for you to run and customize. (<a href="https://github.com/swiperproxy/swiperproxy" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Python</code></li>
+<li><a href="https://asciimoo.github.io/searx/" target="_blank" rel="noopener">Searx</a> - Privacy-respecting, hackable metasearch engine. (<a href="https://searx.me/" target="_blank" rel="noopener">Demo</a>, <a href="https://github.com/asciimoo/searx" target="_blank" rel="noopener">Source Code</a>) <code>AGPL-3.0</code> <code>Python</code></li>
+<li><a href="https://gitbucket.github.io/gitbucket-news/" target="_blank" rel="noopener">gitbucket</a> - The easily installable GitHub clone powered by Scala. (<a href="https://github.com/gitbucket/gitbucket" target="_blank" rel="noopener">Source Code</a>) <code>Apache-2.0</code> <code>Scala/Java</code></li>
+<li><a href="https://www.todomini.app/" target="_blank" rel="noopener">todoMini</a> - Mobile friendly zero-feature TODO list web app. Unix philosophy. (<a href="https://appmini.github.io/todoMini/?demo" target="_blank" rel="noopener">Demo</a>, <a href="https://github.com/appMini/todoMini" target="_blank" rel="noopener">Source Code</a>) <code>GPL-3.0</code> <code>PHP/Clojure</code></li>
+<li><a href="https://wekan.github.io/" target="_blank" rel="noopener">Wekan</a> - Open-source Trello-like kanban. (<a href="https://oasis.sandstorm.io/appdemo/m86q05rdvj14yvn78ghaxynqz7u2svw6rnttptxx49g1785cdv1h" target="_blank" rel="noopener">Demo</a>, <a href="https://github.com/wekan/wekan" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Nodejs</code></li>
+<li><a href="https://dfabric.github.io/DPlatform-Shell/" target="_blank" rel="noopener">DPlatform</a> - Deploy self-hosted apps easily: simple, bloat-free, independent installation. (<a href="https://github.com/j8r/DPlatform" target="_blank" rel="noopener">Source Code</a>) <code>MIT</code> <code>Shell</code></li>
+<li>Lists of software aimed at privacy and decentralization in some form: <a href="https://prism-break.org/en/" target="_blank" rel="noopener">PRISM Break</a>, <a href="https://www.privacytools.io/" target="_blank" rel="noopener">privacytools.io</a>, <a href="https://redecentralize.github.io/alternative-internet/" target="_blank" rel="noopener">Alternative Internet</a>, <a href="http://libreprojects.net/" target="_blank" rel="noopener">Libre Projects</a></li>
+</ul>
+<h4 id="facebook-react-native"><a href="#facebook-react-native" class="headerlink" title="facebook / react-native"></a><a href="https://github.com/facebook/react-native" target="_blank" rel="noopener">facebook / react-native</a></h4><p>A framework for building native apps with React.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>[p]: <a href="https://facebook.github.io/react-native/docs/out-of-tree-platforms" target="_blank" rel="noopener">https://facebook.github.io/react-native/docs/out-of-tree-platforms</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Follow the <a href="https://facebook.github.io/react-native/docs/getting-started.html" target="_blank" rel="noopener">Getting Started guide</a>. The recommended way to install React Native depends on your project. Here you can find short guides for the most common scenarios:</li>
+<li>[new-app]: <a href="https://facebook.github.io/react-native/docs/getting-started.html" target="_blank" rel="noopener">https://facebook.github.io/react-native/docs/getting-started.html</a></li>
+<li>[existing]: <a href="https://facebook.github.io/react-native/docs/integration-with-existing-apps.html" target="_blank" rel="noopener">https://facebook.github.io/react-native/docs/integration-with-existing-apps.html</a></li>
+<li>[docs]: <a href="https://facebook.github.io/react-native/docs/getting-started.html" target="_blank" rel="noopener">https://facebook.github.io/react-native/docs/getting-started.html</a></li>
+<li>[u]: <a href="https://facebook.github.io/react-native/docs/upgrading" target="_blank" rel="noopener">https://facebook.github.io/react-native/docs/upgrading</a></li>
+<li>[contribute]: <a href="https://facebook.github.io/react-native/docs/contributing" target="_blank" rel="noopener">https://facebook.github.io/react-native/docs/contributing</a></li>
+</ul>
+<h4 id="ipfs-shipyard-ipfs-desktop"><a href="#ipfs-shipyard-ipfs-desktop" class="headerlink" title="ipfs-shipyard / ipfs-desktop"></a><a href="https://github.com/ipfs-shipyard/ipfs-desktop" target="_blank" rel="noopener">ipfs-shipyard / ipfs-desktop</a></h4><p>Menubar IPFS Application<br>  <strong>Release</strong></p>
+<ul>
+<li>Mac - <a href="https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v0.8.0/ipfs-desktop-0.8.0.dmg" target="_blank" rel="noopener">ipfs-desktop-0.8.0.dmg</a></li>
+<li>Windows - <a href="https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v0.8.0/ipfs-desktop-setup-0.8.0.exe" target="_blank" rel="noopener">ipfs-desktop-setup-0.8.0.exe</a><br>| <strong>Windows</strong>  | <a href="https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v0.8.0/ipfs-desktop-setup-0.8.0.exe" target="_blank" rel="noopener">ipfs-desktop-setup-0.8.0.exe</a> | <a href="https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v0.8.0/ipfs-desktop-setup-0.8.0.exe" target="_blank" rel="noopener"><img src="https://img.shields.io/github/downloads-pre/ipfs-shipyard/ipfs-desktop/v0.8.0/ipfs-desktop-setup-0.8.0.exe.svg?style=flat-square" alt></a><br>| <strong>Mac</strong>    | <a href="https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v0.8.0/ipfs-desktop-0.8.0.dmg" target="_blank" rel="noopener">ipfs-desktop-0.8.0.dmg</a> | <a href="https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v0.8.0/ipfs-desktop-0.8.0.dmg" target="_blank" rel="noopener"><img src="https://img.shields.io/github/downloads-pre/ipfs-shipyard/ipfs-desktop/v0.8.0/ipfs-desktop-0.8.0.dmg.svg?style=flat-square" alt></a></li>
+</ul>
+<h4 id="ppoffice-hexo-theme-icarus"><a href="#ppoffice-hexo-theme-icarus" class="headerlink" title="ppoffice / hexo-theme-icarus"></a><a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">ppoffice / hexo-theme-icarus</a></h4><p>A simple, delicate, and modern theme for the static site generator Hexo.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/changyan-comment-plugin/" target="_blank" rel="noopener">Changyan</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/disqus-comment-plugin/" target="_blank" rel="noopener">Disqus</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/facebook-comment-plugin/" target="_blank" rel="noopener">Facebook</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/gitment-comment-plugin/" target="_blank" rel="noopener">Gitment</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/isso-comment-plugin/" target="_blank" rel="noopener">Isso</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/livere-comment-plugin/" target="_blank" rel="noopener">LiveRe</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Comment/valine-comment-plugin/" target="_blank" rel="noopener">Valine</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Search/insight-search-plugin/" target="_blank" rel="noopener">Insight Search</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Search/google-cse-plugin/" target="_blank" rel="noopener">Google Custom Search Engine</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Search/baidu-search-plugin/" target="_blank" rel="noopener">Baidu Site Search</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/addthis-share-plugin/" target="_blank" rel="noopener">AddThis</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/addtoany-share-plugin/" target="_blank" rel="noopener">AddToAny</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/baidu-share-plugin/" target="_blank" rel="noopener">Baidu Share</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/share-js-share-plugin/" target="_blank" rel="noopener">Share.js</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/sharethis-share-plugin/" target="_blank" rel="noopener">ShareThis</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Donation/making-money-off-your-blog-with-donation-buttons/#Alipay" target="_blank" rel="noopener">Alipay</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Donation/making-money-off-your-blog-with-donation-buttons/#Wechat" target="_blank" rel="noopener">Wechat</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Donation/making-money-off-your-blog-with-donation-buttons/#Paypal" target="_blank" rel="noopener">Paypal</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Donation/making-money-off-your-blog-with-donation-buttons/#Patreon" target="_blank" rel="noopener">Patreon</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Configuration/Posts/hexo-built-in-tag-helpers/" target="_blank" rel="noopener">Hexo Tag Plugin</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/General/gallery-plugin/" target="_blank" rel="noopener">lightGallery &amp; Justified Gallery</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/General/mathjax-plugin/" target="_blank" rel="noopener">MathJax</a></li>
+<li><a href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/" target="_blank" rel="noopener">Site Analytics</a></li>
+</ul>
+<h4 id="facebook-create-react-app"><a href="#facebook-create-react-app" class="headerlink" title="facebook / create-react-app"></a><a href="https://github.com/facebook/create-react-app" target="_blank" rel="noopener">facebook / create-react-app</a></h4><p>Set up a modern web app by running one command.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://facebook.github.io/create-react-app/" target="_blank" rel="noopener">User Guide</a> – How to develop apps bootstrapped with Create React App.</li>
+<li><a href="https://facebook.github.io/create-react-app/docs/running-tests" target="_blank" rel="noopener">Read more about testing.</a></li>
+<li>You can find detailed instructions on using Create React App and many tips in <a href="https://facebook.github.io/create-react-app/" target="_blank" rel="noopener">its documentation</a>.</li>
+<li>Please refer to the <a href="https://facebook.github.io/create-react-app/docs/updating-to-new-releases" target="_blank" rel="noopener">User Guide</a> for this and other information.</li>
+<li>An offline-first <a href="https://developers.google.com/web/fundamentals/getting-started/primers/service-workers" target="_blank" rel="noopener">service worker</a> and a <a href="https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/" target="_blank" rel="noopener">web app manifest</a>, meeting all the <a href="https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app" target="_blank" rel="noopener">Progressive Web App</a> criteria. (<em>Note: Using the service worker is opt-in as of <code>react-scripts@2.0.0</code> and higher</em>)</li>
+<li>The tradeoff is that <strong>these tools are preconfigured to work in a specific way</strong>. If your project needs more customization, you can <a href="https://facebook.github.io/create-react-app/docs/available-scripts#npm-run-eject" target="_blank" rel="noopener">“eject”</a> and customize it, but then you will need to maintain this configuration.</li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《Github Trending and Good Stuff 2019-08-06》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/06/github-trending-and-good-stuff-2019-08-06/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                KevinZhang
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC80NTU2Ni8yMjA3Nw==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/08/06/github-trending-and-good-stuff-2019-08-06/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-06">
+                        
+                        <span class="card-title">Github Trending and Good Stuff 2019-08-06</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            jupyter-notebookjustmarkham / pandas-videosJupyter notebook and datasets from the pandas Q&amp;A video series  Good Stuf
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            KevinZhang
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/machine-learning/" target="_blank">
+                        <span class="chip bg-color">machine learning</span>
+                    </a>
+                    
+                    <a href="/tags/机器学习/" target="_blank">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/Github-Trending/" target="_blank">
+                        <span class="chip bg-color">Github Trending</span>
+                    </a>
+                    
+                    <a href="/tags/good-stuff/" target="_blank">
+                        <span class="chip bg-color">good stuff</span>
+                    </a>
+                    
+                    <a href="/tags/相关材料/" target="_blank">
+                        <span class="chip bg-color">相关材料</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/08/05/github-trending-and-good-stuff-2019-08-05/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-05">
+                        
+                        <span class="card-title">Github Trending and Good Stuff 2019-08-05</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            jupyter-notebookjakevdp / PythonDataScienceHandbookPython Data Science Handbook: full text in Jupyter Notebooks  Good St
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            KevinZhang
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/machine-learning/" target="_blank">
+                        <span class="chip bg-color">machine learning</span>
+                    </a>
+                    
+                    <a href="/tags/机器学习/" target="_blank">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/Github-Trending/" target="_blank">
+                        <span class="chip bg-color">Github Trending</span>
+                    </a>
+                    
+                    <a href="/tags/good-stuff/" target="_blank">
+                        <span class="chip bg-color">good stuff</span>
+                    </a>
+                    
+                    <a href="/tags/相关材料/" target="_blank">
+                        <span class="chip bg-color">相关材料</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+
+            
+            
+
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
