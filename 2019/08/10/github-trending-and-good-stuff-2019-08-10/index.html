@@ -1,0 +1,884 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Github Trending and Good Stuff 2019-08-10, machine learning, 机器学习, modeling, 建模, scoring, 评分">
+    <meta name="description" content="jupyter-notebookslundberg / shapA unified approach to explain the output of any machine learning model.  Good Stuff
+
+NHA">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Github Trending and Good Stuff 2019-08-10 | KevinZhang&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">KevinZhang's Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">KevinZhang's Blog</div>
+        <div class="logo-desc">
+            
+            非著名数据分析师
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Github Trending and Good Stuff 2019-08-10
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/machine-learning/" target="_blank">
+                                <span class="chip bg-color">machine learning</span>
+                            </a>
+                        
+                            <a href="/tags/机器学习/" target="_blank">
+                                <span class="chip bg-color">机器学习</span>
+                            </a>
+                        
+                            <a href="/tags/Github-Trending/" target="_blank">
+                                <span class="chip bg-color">Github Trending</span>
+                            </a>
+                        
+                            <a href="/tags/good-stuff/" target="_blank">
+                                <span class="chip bg-color">good stuff</span>
+                            </a>
+                        
+                            <a href="/tags/相关材料/" target="_blank">
+                                <span class="chip bg-color">相关材料</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-08-10
+                </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="jupyter-notebook"><a href="#jupyter-notebook" class="headerlink" title="jupyter-notebook"></a>jupyter-notebook</h3><h4 id="slundberg-shap"><a href="#slundberg-shap" class="headerlink" title="slundberg / shap"></a><a href="https://github.com/slundberg/shap" target="_blank" rel="noopener">slundberg / shap</a></h4><p>A unified approach to explain the output of any machine learning model.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://slundberg.github.io/shap/notebooks/NHANES%20I%20Survival%20Model.html" target="_blank" rel="noopener"><strong>NHANES survival model with XGBoost and SHAP interaction values</strong></a> - Using mortality data from 20 years of followup this notebook demonstrates how to use XGBoost and <code>shap</code> to uncover complex risk factor relationships.</li>
+<li><a href="https://slundberg.github.io/shap/notebooks/Census%20income%20classification%20with%20LightGBM.html" target="_blank" rel="noopener"><strong>Census income classification with LightGBM</strong></a> - Using the standard adult census income dataset, this notebook trains a gradient boosting tree model with LightGBM and then explains predictions using <code>shap</code>.</li>
+<li><a href="https://slundberg.github.io/shap/notebooks/League%20of%20Legends%20Win%20Prediction%20with%20XGBoost.html" target="_blank" rel="noopener"><strong>League of Legends Win Prediction with XGBoost</strong></a> - Using a Kaggle dataset of 180,000 ranked matches from League of Legends we train and explain a gradient boosting tree model with XGBoost to predict if a player will win their match.</li>
+<li><a href="https://slundberg.github.io/shap/notebooks/deep_explainer/Front%20Page%20DeepExplainer%20MNIST%20Example.html" target="_blank" rel="noopener"><strong>MNIST Digit classification with Keras</strong></a> - Using the MNIST handwriting recognition dataset, this notebook trains a neural network with Keras and then explains predictions using <code>shap</code>.</li>
+<li><a href="https://slundberg.github.io/shap/notebooks/deep_explainer/Keras%20LSTM%20for%20IMDB%20Sentiment%20Classification.html" target="_blank" rel="noopener"><strong>Keras LSTM for IMDB Sentiment Classification</strong></a> - This notebook trains an LSTM with Keras on the IMDB text sentiment analysis dataset and then explains predictions using <code>shap</code>. </li>
+<li><a href="https://slundberg.github.io/shap/notebooks/gradient_explainer/Explain%20an%20Intermediate%20Layer%20of%20VGG16%20on%20ImageNet.html" target="_blank" rel="noopener"><strong>Explain an Intermediate Layer of VGG16 on ImageNet</strong></a> - This notebook demonstrates how to explain the output of a pre-trained VGG16 ImageNet model using an internal convolutional layer.</li>
+<li><a href="https://slundberg.github.io/shap/notebooks/linear_explainer/Sentiment%20Analysis%20with%20Logistic%20Regression.html" target="_blank" rel="noopener"><strong>Sentiment Analysis with Logistic Regression</strong></a> - This notebook demonstrates how to explain a linear logistic regression sentiment analysis model.</li>
+<li><a href="https://slundberg.github.io/shap/notebooks/Census%20income%20classification%20with%20scikit-learn.html" target="_blank" rel="noopener"><strong>Census income classification with scikit-learn</strong></a> - Using the standard adult census income dataset, this notebook trains a k-nearest neighbors classifier using scikit-learn and then explains predictions using <code>shap</code>.</li>
+<li><a href="https://slundberg.github.io/shap/notebooks/ImageNet%20VGG16%20Model%20with%20Keras.html" target="_blank" rel="noopener"><strong>ImageNet VGG16 Model with Keras</strong></a> - Explain the classic VGG16 convolutional nerual network’s predictions for an image. This works by applying the model agnostic Kernel SHAP method to a super-pixel segmented image.</li>
+<li><a href="https://slundberg.github.io/shap/notebooks/Iris%20classification%20with%20scikit-learn.html" target="_blank" rel="noopener"><strong>Iris classification</strong></a> - A basic demonstration using the popular iris species dataset. It explains predictions from six different models in scikit-learn using <code>shap</code>.</li>
+<li><a href="https://slundberg.github.io/shap/notebooks/plots/dependence_plot.html" target="_blank" rel="noopener"><code>shap.dependence_plot</code></a></li>
+</ul>
+<h4 id="simoninithomas-Deep-reinforcement-learning-Course"><a href="#simoninithomas-Deep-reinforcement-learning-Course" class="headerlink" title="simoninithomas / Deep_reinforcement_learning_Course"></a><a href="https://github.com/simoninithomas/Deep_reinforcement_learning_Course" target="_blank" rel="noopener">simoninithomas / Deep_reinforcement_learning_Course</a></h4><p>Implementations from the free course Deep Reinforcement Learning with Tensorflow<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://simoninithomas.github.io/Deep_reinforcement_learning_Course/" target="_blank" rel="noopener">Deep Reinforcement Learning Course</a></li>
+<li><ul>
+<li><p> 🌐 : https://simoninithomas.github.io/Deep_reinforcement_learning_Course/ </p>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="CamDavidsonPilon-Probabilistic-Programming-and-Bayesian-Methods-for-Hackers"><a href="#CamDavidsonPilon-Probabilistic-Programming-and-Bayesian-Methods-for-Hackers" class="headerlink" title="CamDavidsonPilon / Probabilistic-Programming-and-Bayesian-Methods-for-Hackers"></a><a href="https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers" target="_blank" rel="noopener">CamDavidsonPilon / Probabilistic-Programming-and-Bayesian-Methods-for-Hackers</a></h4><p>aka “Bayesian Methods for Hackers”: An introduction to Bayesian methods + probabilistic programming with a computation/understanding-first, mathematics-second point of view. All in pure Python ;)<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><h1 id="Bayesian-Methods-for-Hackers"><a href="#Bayesian-Methods-for-Hackers" class="headerlink" title="Bayesian Methods for Hackers"></a><a href="http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/" target="_blank" rel="noopener">Bayesian Methods for Hackers</a></h1></li>
+<li>See the project homepage <a href="http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/" target="_blank" rel="noopener">here</a> for examples, too.</li>
+<li><a href="http://jensrantil.github.io" target="_blank" rel="noopener">Jens Rantil</a> |  <a href="http://kyleam.com" target="_blank" rel="noopener">Kyle Meyer</a>  |  <a href="http://ericmart.in" target="_blank" rel="noopener">Eric Martin</a>  | <a href="https://github.com/Inconditus" target="_blank" rel="noopener">Inconditus</a></li>
+</ul>
+<h4 id="MVIG-SJTU-AlphaPose"><a href="#MVIG-SJTU-AlphaPose" class="headerlink" title="MVIG-SJTU / AlphaPose"></a><a href="https://github.com/MVIG-SJTU/AlphaPose" target="_blank" rel="noopener">MVIG-SJTU / AlphaPose</a></h4><p>Real-Time and Accurate Multi-Person Pose Estimation&amp;Tracking System<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>AlphaPose is based on RMPE(ICCV’17), authored by <a href="https://fang-haoshu.github.io/" target="_blank" rel="noopener">Hao-shu Fang</a>, Shuqin Xie, <a href="https://scholar.google.com/citations?user=nFhLmFkAAAAJ&hl=en" target="_blank" rel="noopener">Yu-Wing Tai</a> and <a href="http://www.mvig.org/" target="_blank" rel="noopener">Cewu Lu</a>, <a href="http://mvig.sjtu.edu.cn/" target="_blank" rel="noopener">Cewu Lu</a> is the corresponding author. Currently, it is developed and maintained by <a href="https://fang-haoshu.github.io/" target="_blank" rel="noopener">Hao-shu Fang</a>, <a href="http://jeff-leaf.site/" target="_blank" rel="noopener">Jiefeng Li</a>, <a href="http://xiuyuliang.cn/about/" target="_blank" rel="noopener">Yuliang Xiu</a> and <a href="https://crh19970307.github.io/" target="_blank" rel="noopener">Ruiheng Chang</a>. </li>
+</ul>
+<h4 id="onnx-tutorials"><a href="#onnx-tutorials" class="headerlink" title="onnx / tutorials"></a><a href="https://github.com/onnx/tutorials" target="_blank" rel="noopener">onnx / tutorials</a></h4><p>Tutorials for creating and using ONNX models<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://github.com/microsoft/onnxruntime" target="_blank" rel="noopener">ONNX Runtime</a> | Python (Pypi) - <a href="https://pypi.org/project/onnxruntime/" target="_blank" rel="noopener">onnxruntime</a> and <a href="https://pypi.org/project/onnxruntime-gpu" target="_blank" rel="noopener">onnxruntime-gpu</a><br>C/C# (Nuget) - <a href="https://www.nuget.org/packages/Microsoft.ML.OnnxRuntime/" target="_blank" rel="noopener">Microsoft.ML.OnnxRuntime</a> and <a href="https://www.nuget.org/packages/Microsoft.ML.OnnxRuntime.Gpu/" target="_blank" rel="noopener">Microsoft.ML.OnnxRuntime.Gpu</a>| APIs: <a href="https://aka.ms/onnxruntime-python" target="_blank" rel="noopener">Python</a>, <a href="https://github.com/Microsoft/onnxruntime/blob/master/docs/CSharp_API.md" target="_blank" rel="noopener">C#</a>, <a href="https://github.com/Microsoft/onnxruntime/blob/master/docs/C_API.md" target="_blank" rel="noopener">C</a>, <a href="https://github.com/Microsoft/onnxruntime/blob/master/onnxruntime/core/session/inference_session.h" target="_blank" rel="noopener">C++</a><br>Examples - <a href="https://microsoft.github.io/onnxruntime/auto_examples/plot_load_and_predict.html#" target="_blank" rel="noopener">Python</a>, <a href="https://github.com/Microsoft/onnxruntime/blob/master/csharp/test/Microsoft.ML.OnnxRuntime.Tests/InferenceTest.cs#L54" target="_blank" rel="noopener">C#</a>, <a href="https://github.com/Microsoft/onnxruntime/blob/master/csharp/test/Microsoft.ML.OnnxRuntime.EndToEndTests.Capi/C_Api_Sample.cpp" target="_blank" rel="noopener">C</a> |</li>
+<li><ul>
+<li><a href="https://microsoft.github.io/onnxruntime/auto_examples/plot_load_and_predict.html#sphx-glr-auto-examples-plot-load-and-predict-py" target="_blank" rel="noopener">Inferencing ONNX models using ONNX Runtime Python API</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h3><h4 id="onevcat-Kingfisher"><a href="#onevcat-Kingfisher" class="headerlink" title="onevcat / Kingfisher"></a><a href="https://github.com/onevcat/Kingfisher" target="_blank" rel="noopener">onevcat / Kingfisher</a></h4><p>A lightweight, pure-Swift library for downloading and caching images from the web.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><ul>
+<li><ul>
+<li><a href="http://onevcat.github.io/Kingfisher/" target="_blank" rel="noopener">API Reference</a> - Lastly, please remember to read the full whenever you may need a more detailed reference.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Alamofire-Alamofire"><a href="#Alamofire-Alamofire" class="headerlink" title="Alamofire / Alamofire"></a><a href="https://github.com/Alamofire/Alamofire" target="_blank" rel="noopener">Alamofire / Alamofire</a></h4><p>Elegant HTTP Networking in Swift<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><ul>
+<li><input checked disabled type="checkbox"> <a href="https://alamofire.github.io/Alamofire" target="_blank" rel="noopener">Complete Documentation</a></li>
+</ul>
+</li>
+<li>If you need to <strong>find or understand an API</strong>, check <a href="http://alamofire.github.io/Alamofire/" target="_blank" rel="noopener">our documentation</a> or <a href="https://developer.apple.com/documentation/foundation/url_loading_system" target="_blank" rel="noopener">Apple’s documentation for <code>URLSession</code></a>, on top of which Alamofire is built.</li>
+</ul>
+<h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><h4 id="facebook-create-react-app"><a href="#facebook-create-react-app" class="headerlink" title="facebook / create-react-app"></a><a href="https://github.com/facebook/create-react-app" target="_blank" rel="noopener">facebook / create-react-app</a></h4><p>Set up a modern web app by running one command.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://facebook.github.io/create-react-app/" target="_blank" rel="noopener">User Guide</a> – How to develop apps bootstrapped with Create React App.</li>
+<li><a href="https://facebook.github.io/create-react-app/docs/running-tests" target="_blank" rel="noopener">Read more about testing.</a></li>
+<li>You can find detailed instructions on using Create React App and many tips in <a href="https://facebook.github.io/create-react-app/" target="_blank" rel="noopener">its documentation</a>.</li>
+<li>Please refer to the <a href="https://facebook.github.io/create-react-app/docs/updating-to-new-releases" target="_blank" rel="noopener">User Guide</a> for this and other information.</li>
+<li>An offline-first <a href="https://developers.google.com/web/fundamentals/getting-started/primers/service-workers" target="_blank" rel="noopener">service worker</a> and a <a href="https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/" target="_blank" rel="noopener">web app manifest</a>, meeting all the <a href="https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app" target="_blank" rel="noopener">Progressive Web App</a> criteria. (<em>Note: Using the service worker is opt-in as of <code>react-scripts@2.0.0</code> and higher</em>)</li>
+<li>The tradeoff is that <strong>these tools are preconfigured to work in a specific way</strong>. If your project needs more customization, you can <a href="https://facebook.github.io/create-react-app/docs/available-scripts#npm-run-eject" target="_blank" rel="noopener">“eject”</a> and customize it, but then you will need to maintain this configuration.</li>
+</ul>
+<h4 id="facebook-react"><a href="#facebook-react" class="headerlink" title="facebook / react"></a><a href="https://github.com/facebook/react" target="_blank" rel="noopener">facebook / react</a></h4><p>A declarative, efficient, and flexible JavaScript library for building user interfaces.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><strong>Learn Once, Write Anywhere:</strong> We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using Node and power mobile apps using <a href="https://facebook.github.io/react-native/" target="_blank" rel="noopener">React Native</a>.</li>
+</ul>
+<h4 id="Wscats-piano"><a href="#Wscats-piano" class="headerlink" title="Wscats / piano"></a><a href="https://github.com/Wscats/piano" target="_blank" rel="noopener">Wscats / piano</a></h4><p>🎹<br>用键盘8个键演奏一首蒲公英的约定送给996的自己或月亮代表我的心给七夕的她，非常简单~<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>体验地址： <a href="https://wscats.github.io/piano/build/" target="_blank" rel="noopener">https://wscats.github.io/piano/build/</a></li>
+</ul>
+<h4 id="material-components-material-components-web"><a href="#material-components-material-components-web" class="headerlink" title="material-components / material-components-web"></a><a href="https://github.com/material-components/material-components-web" target="_blank" rel="noopener">material-components / material-components-web</a></h4><p>Modular and customizable Material Design UI components for the web<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://material-components.github.io/material-components-web-catalog" target="_blank" rel="noopener">Demos</a></li>
+</ul>
+<h4 id="xuliangzhan-vxe-table"><a href="#xuliangzhan-vxe-table" class="headerlink" title="xuliangzhan / vxe-table"></a><a href="https://github.com/xuliangzhan/vxe-table" target="_blank" rel="noopener">xuliangzhan / vxe-table</a></h4><p>🐬<br>一个功能齐全的 Vue 表组件，与任意组件库完美兼容<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://xuliangzhan.github.io/vxe-table/#/table/base/basic" target="_blank" rel="noopener">To view the example</a> <a href="https://xuliangzhan_admin.gitee.io/vxe-table/#/table/base/basic" target="_blank" rel="noopener">查看演示</a>  </li>
+<li><a href="https://xuliangzhan.github.io/vxe-table/#/table/api" target="_blank" rel="noopener">To view the document</a> <a href="https://xuliangzhan_admin.gitee.io/vxe-table/#/table/api" target="_blank" rel="noopener">查看文档</a>  </li>
+</ul>
+<h4 id="aws-aws-sdk-js"><a href="#aws-aws-sdk-js" class="headerlink" title="aws / aws-sdk-js"></a><a href="https://github.com/aws/aws-sdk-js" target="_blank" rel="noopener">aws / aws-sdk-js</a></h4><p>AWS SDK for JavaScript in the browser and Node.js<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>For browser-based web, mobile and hybrid apps, you can use <a href="https://aws.github.io/aws-amplify/?utm_source=aws-js-sdk&utm_campaign=browser" target="_blank" rel="noopener">AWS Amplify Library</a> which extends the AWS SDK and provides an easier and declarative interface.</li>
+<li>Alternatively, you can use <a href="https://aws.github.io/aws-amplify/media/react_native_guide?utm_source=aws-js-sdk&utm_campaign=react-native" target="_blank" rel="noopener">AWS Amplify Library</a> which extends AWS SDK and provides React Native UI components and CLI support to work with AWS services.</li>
+<li>To create React applications with AWS SDK, you can use <a href="https://aws.github.io/aws-amplify/media/react_guide?utm_source=aws-js-sdk&utm_campaign=react" target="_blank" rel="noopener">AWS Amplify Library</a> which provides React components and CLI support to work with AWS services.</li>
+<li><a href="https://aws.github.io/aws-amplify/media/angular_guide?utm_source=aws-js-sdk&utm_campaign=angular" target="_blank" rel="noopener">AWS Amplify Library</a> provides Angular components and CLI support to work with AWS services.</li>
+</ul>
+<h4 id="NervJS-taro"><a href="#NervJS-taro" class="headerlink" title="NervJS / taro"></a><a href="https://github.com/NervJS/taro" target="_blank" rel="noopener">NervJS / taro</a></h4><p>多端统一开发框架，支持用 React 的开发方式编写一次代码，生成能运行在微信/百度/支付宝/字节跳动/ QQ 小程序、快应用、H5、React Native 等的应用。 <a href="https://taro.jd.com/" target="_blank" rel="noopener">https://taro.jd.com/</a><br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><ul>
+<li>请参考<a href="https://nervjs.github.io/taro/docs/CONTRIBUTING.html" target="_blank" rel="noopener">贡献指南</a>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="vuejs-vue-router"><a href="#vuejs-vue-router" class="headerlink" title="vuejs / vue-router"></a><a href="https://github.com/vuejs/vue-router" target="_blank" rel="noopener">vuejs / vue-router</a></h4><p>🚦<br>The official router for Vue.js.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>Get started with the <a href="http://vuejs.github.io/vue-router" target="_blank" rel="noopener">documentation</a>.</li>
+</ul>
+<h3 id="go"><a href="#go" class="headerlink" title="go"></a>go</h3><h4 id="argoproj-argo"><a href="#argoproj-argo" class="headerlink" title="argoproj / argo"></a><a href="https://github.com/argoproj/argo" target="_blank" rel="noopener">argoproj / argo</a></h4><p>Argo Workflows: Get stuff done with Kubernetes.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>Argo website: <a href="https://argoproj.github.io/" target="_blank" rel="noopener">https://argoproj.github.io/</a></li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《Github Trending and Good Stuff 2019-08-10》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/10/github-trending-and-good-stuff-2019-08-10/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                KevinZhang
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC80NTU2Ni8yMjA3Nw==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/08/10/github-trending-and-good-stuff-2019-08-10/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-10">
+                        
+                        <span class="card-title">Github Trending and Good Stuff 2019-08-10</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            jupyter-notebookslundberg / shapA unified approach to explain the output of any machine learning model.  Good Stuff
+
+NHA
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            KevinZhang
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/machine-learning/" target="_blank">
+                        <span class="chip bg-color">machine learning</span>
+                    </a>
+                    
+                    <a href="/tags/机器学习/" target="_blank">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/Github-Trending/" target="_blank">
+                        <span class="chip bg-color">Github Trending</span>
+                    </a>
+                    
+                    <a href="/tags/good-stuff/" target="_blank">
+                        <span class="chip bg-color">good stuff</span>
+                    </a>
+                    
+                    <a href="/tags/相关材料/" target="_blank">
+                        <span class="chip bg-color">相关材料</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/08/08/github-trending-and-good-stuff-2019-08-08/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-08">
+                        
+                        <span class="card-title">Github Trending and Good Stuff 2019-08-08</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            jupyter-notebookspro / practical-pytorchPyTorch tutorials demonstrating modern techniques with readable code  Good Stuff
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            KevinZhang
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/machine-learning/" target="_blank">
+                        <span class="chip bg-color">machine learning</span>
+                    </a>
+                    
+                    <a href="/tags/机器学习/" target="_blank">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/Github-Trending/" target="_blank">
+                        <span class="chip bg-color">Github Trending</span>
+                    </a>
+                    
+                    <a href="/tags/good-stuff/" target="_blank">
+                        <span class="chip bg-color">good stuff</span>
+                    </a>
+                    
+                    <a href="/tags/相关材料/" target="_blank">
+                        <span class="chip bg-color">相关材料</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+
+            
+            
+
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
