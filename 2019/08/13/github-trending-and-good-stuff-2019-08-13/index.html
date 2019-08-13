@@ -4,12 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="SAS中如何通过决策树选择重要入选变量, machine learning, 机器学习, modeling, 建模, scoring, 评分">
-    <meta name="description" content="SAS中如何通过决策树选择重要入选变量以下在SAS的EM中通过一个案例来说明决策树选择重要变量的过程：
-整体流程图
-上图中从左到右分别为步骤1-4，其中步骤4是神经网络，其实不重要，重要的是前3步，第4步可以是其他节点。
-选择案例数据
-插入">
+    <meta name="keywords" content="Github Trending and Good Stuff 2019-08-13, machine learning, 机器学习, modeling, 建模, scoring, 评分">
+    <meta name="description" content="jupyter-notebookhscspring / All4NLPAll For NLP, especially Chinese.  Good Stuff
+
+ryan mcdonald, Ryan McDonald - Google S">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>SAS中如何通过决策树选择重要入选变量 | KevinZhang&#39;s Blog</title>
+    <title>Github Trending and Good Stuff 2019-08-13 | KevinZhang&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -196,13 +194,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        SAS中如何通过决策树选择重要入选变量
+                        Github Trending and Good Stuff 2019-08-13
                     </div>
                 </div>
             </div>
@@ -313,6 +311,10 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/Github-Trending/" target="_blank">
+                                <span class="chip bg-color">Github Trending</span>
+                            </a>
+                        
                             <a href="/tags/machine-learning/" target="_blank">
                                 <span class="chip bg-color">machine learning</span>
                             </a>
@@ -321,8 +323,12 @@
                                 <span class="chip bg-color">机器学习</span>
                             </a>
                         
-                            <a href="/tags/SAS/" target="_blank">
-                                <span class="chip bg-color">SAS</span>
+                            <a href="/tags/good-stuff/" target="_blank">
+                                <span class="chip bg-color">good stuff</span>
+                            </a>
+                        
+                            <a href="/tags/相关材料/" target="_blank">
+                                <span class="chip bg-color">相关材料</span>
                             </a>
                         
                     </div>
@@ -336,7 +342,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-29
+                    2019-08-13
                 </div>
 
                 
@@ -352,20 +358,97 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="SAS中如何通过决策树选择重要入选变量"><a href="#SAS中如何通过决策树选择重要入选变量" class="headerlink" title="SAS中如何通过决策树选择重要入选变量"></a>SAS中如何通过决策树选择重要入选变量</h1><p>以下在SAS的EM中通过一个案例来说明决策树选择重要变量的过程：</p>
-<h2 id="整体流程图"><a href="#整体流程图" class="headerlink" title="整体流程图"></a>整体流程图</h2><p><img src="/images/image-20190729171250162.png" alt></p>
-<p>上图中从左到右分别为步骤1-4，其中步骤4是神经网络，其实不重要，重要的是前3步，第4步可以是其他节点。</p>
-<h2 id="选择案例数据"><a href="#选择案例数据" class="headerlink" title="选择案例数据"></a>选择案例数据</h2><p><img src="/images/image-20190729171524119.png" alt></p>
-<p>插入<code>Input Data Source</code> 节点，选择<code>SAMPSIO.HMEQ</code>作为源数据，并点<code>Change</code>钩上<code>Use complete data as sample</code>选择全部数据用作后续操作。</p>
-<h2 id="设置训练、验证数据比例"><a href="#设置训练、验证数据比例" class="headerlink" title="设置训练、验证数据比例"></a>设置训练、验证数据比例</h2><p><img src="/images/image-20190729172417734.png" alt></p>
-<p>训练：67%，验证：33%</p>
-<h2 id="决策树设置"><a href="#决策树设置" class="headerlink" title="决策树设置"></a>决策树设置</h2><p><img src="/images/image-20190729172732498.png" alt></p>
-<p>打开决策树设置，唯一要更改的是上图中圈红的地方，从0改成2（备选规则存储）。</p>
-<p>然后关闭后运行决策树，运行结束后右键查看决策树结果：</p>
-<p><img src="/images/image-20190729170941079.png" alt></p>
-<p>在<code>Score</code>页面中子页面<code>Variable Selection</code>中可以看到变量的重要性排序。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>好处是先把作用不大的变量直接筛选掉，跟在这个决策树后面的节点默认会排除掉决策树中已经<code>rejected</code>的变量。</p>
-<p>如果变量特别多的时候，这种方法特别有效。</p>
+                <h3 id="jupyter-notebook"><a href="#jupyter-notebook" class="headerlink" title="jupyter-notebook"></a>jupyter-notebook</h3><h4 id="hscspring-All4NLP"><a href="#hscspring-All4NLP" class="headerlink" title="hscspring / All4NLP"></a><a href="https://github.com/hscspring/All4NLP" target="_blank" rel="noopener">hscspring / All4NLP</a></h4><p>All For NLP, especially Chinese.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://ryanmcd.github.io/" target="_blank" rel="noopener">ryan mcdonald</a>, <a href="https://scholar.google.com/citations?user=i05BhUgAAAAJ&hl=en" target="_blank" rel="noopener">Ryan McDonald - Google Scholar Citations</a></li>
+</ul>
+<h4 id="Mikoto10032-DeepLearning"><a href="#Mikoto10032-DeepLearning" class="headerlink" title="Mikoto10032 / DeepLearning"></a><a href="https://github.com/Mikoto10032/DeepLearning" target="_blank" rel="noopener">Mikoto10032 / DeepLearning</a></h4><p>深度学习入门教程&amp;&amp;优秀文章&amp;&amp;Deep Learning Tutorial<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://handong1587.github.io/categories.html#deep_learning-ref" target="_blank" rel="noopener">hangdong的深度学习博客,论文推荐</a></li>
+<li><a href="http://colah.github.io/" target="_blank" rel="noopener">3. colah’s blog</a></li>
+<li><a href="https://buptldy.github.io/2016/10/29/2016-10-29-deconv/" target="_blank" rel="noopener">反卷积</a> </li>
+<li><a href="https://bindog.github.io/blog/2018/02/10/model-explanation/" target="_blank" rel="noopener">凭什么相信CNN的结果?–可视化</a>                </li>
+<li><ul>
+<li><a href="https://bindog.github.io/blog/2018/02/10/model-explanation/" target="_blank" rel="noopener">凭什么相信你，我的CNN模型？（篇一：CAM和Grad-CAM)</a></li>
+</ul>
+</li>
+<li><ul>
+<li><a href="http://bindog.github.io/blog/2018/02/11/model-explanation-2/" target="_blank" rel="noopener">凭什么相信你，我的CNN模型？（篇二：万金油LIME)</a></li>
+</ul>
+</li>
+<li><a href="https://mlelarge.github.io/dataflowr-web/cea_edf_inria.html" target="_blank" rel="noopener">Hands-on tour to deep learning with PyTorch</a></li>
+<li><a href="https://handong1587.github.io/deep_learning/2017/12/18/keep-up-with-new-trends.html" target="_blank" rel="noopener">Keep Up With New Trends</a></li>
+<li><a href="https://xpqiu.github.io/slides/20181019-PaperWriting.pdf" target="_blank" rel="noopener">如何端到端地写科研论文-邱锡鹏</a></li>
+</ul>
+<h3 id="python"><a href="#python" class="headerlink" title="python"></a>python</h3><h4 id="ytdl-org-youtube-dl"><a href="#ytdl-org-youtube-dl" class="headerlink" title="ytdl-org / youtube-dl"></a><a href="https://github.com/ytdl-org/youtube-dl" target="_blank" rel="noopener">ytdl-org / youtube-dl</a></h4><p>Command-line program to download videos from YouTube.com and other video sites<br>  <strong>Release</strong><br>Windows users can <a href="https://yt-dl.org/latest/youtube-dl.exe" target="_blank" rel="noopener">download an .exe file</a> and place it in any location on their <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29" target="_blank" rel="noopener">PATH</a> except for <code>%SYSTEMROOT%\System32</code> (e.g. <strong>do not</strong> put in <code>C:\Windows\System32</code>).<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>Alternatively, refer to the <a href="#developer-instructions">developer instructions</a> for how to check out and work with the git repository. For further options, including PGP signatures, see the <a href="https://ytdl-org.github.io/youtube-dl/download.html" target="_blank" rel="noopener">youtube-dl Download Page</a>.</li>
+<li>If you’ve followed <a href="https://ytdl-org.github.io/youtube-dl/download.html" target="_blank" rel="noopener">our manual installation instructions</a>, you can simply run <code>youtube-dl -U</code> (or, on Linux, <code>sudo youtube-dl -U</code>).</li>
+<li>Afterwards, simply follow <a href="https://ytdl-org.github.io/youtube-dl/download.html" target="_blank" rel="noopener">our manual installation instructions</a>:</li>
+<li>In particular, the generic extractor (used when your website is not in the <a href="https://ytdl-org.github.io/youtube-dl/supportedsites.html" target="_blank" rel="noopener">list of supported sites by youtube-dl</a> cannot mandate one specific downloader.</li>
+<li>Most users do not need to build youtube-dl and can <a href="https://ytdl-org.github.io/youtube-dl/download.html" target="_blank" rel="noopener">download the builds</a> or get them from their distribution.</li>
+</ul>
+<h4 id="donnemartin-system-design-primer"><a href="#donnemartin-system-design-primer" class="headerlink" title="donnemartin / system-design-primer"></a><a href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener">donnemartin / system-design-primer</a></h4><p>Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="http://dancres.github.io/Pages/" target="_blank" rel="noopener">A distributed systems reading list</a></li>
+</ul>
+<h4 id="ranger-ranger"><a href="#ranger-ranger" class="headerlink" title="ranger / ranger"></a><a href="https://github.com/ranger/ranger" target="_blank" rel="noopener">ranger / ranger</a></h4><p>A VIM-inspired filemanager for the console<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><ul>
+<li>Website:     <a href="https://ranger.github.io/" target="_blank" rel="noopener">https://ranger.github.io/</a></li>
+</ul>
+</li>
+<li>Download:    <a href="https://ranger.github.io/ranger-stable.tar.gz" target="_blank" rel="noopener">https://ranger.github.io/ranger-stable.tar.gz</a></li>
+</ul>
+<h4 id="instagrambot-instabot"><a href="#instagrambot-instabot" class="headerlink" title="instagrambot / instabot"></a><a href="https://github.com/instagrambot/instabot" target="_blank" rel="noopener">instagrambot / instabot</a></h4><p>🐙<br>Free Instagram scripts, bots and Python API wrapper. Get free instagram followers with our auto like, auto follow and other scripts!<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://instagrambot.github.io/docs/" target="_blank" rel="noopener">Read the Docs</a> | <a href="https://github.com/instagrambot/docs/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute</a></li>
+<li>or see <a href="https://instagrambot.github.io/docs/en/#installation" target="_blank" rel="noopener">this</a> for more details.</li>
+</ul>
+<h4 id="RustPython-RustPython"><a href="#RustPython-RustPython" class="headerlink" title="RustPython / RustPython"></a><a href="https://github.com/RustPython/RustPython" target="_blank" rel="noopener">RustPython / RustPython</a></h4><p>A Python Interpreter written in Rust<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>Check out our <a href="https://rustpython.github.io/demo/" target="_blank" rel="noopener">online demo</a> running on WebAssembly.</li>
+</ul>
+<h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><h4 id="ziahamza-webui-aria2"><a href="#ziahamza-webui-aria2" class="headerlink" title="ziahamza / webui-aria2"></a><a href="https://github.com/ziahamza/webui-aria2" target="_blank" rel="noopener">ziahamza / webui-aria2</a></h4><p>The aim for this project is to create the worlds best and hottest interface to interact with aria2. Very simple to use, just download and open index.html in any web browser.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>If aria2 is not installed in your local machine then head on to <a href="https://aria2.github.io/" target="_blank" rel="noopener">https://aria2.github.io/</a> and follow the instructions there.</li>
+<li>Or you could just head on to <a href="https://ziahamza.github.io/webui-aria2" target="_blank" rel="noopener">https://ziahamza.github.io/webui-aria2</a> and start downloading files! Once you have visited the URL thanks to <a href="https://developers.google.com/web/progressive-web-apps/" target="_blank" rel="noopener">Progressive Web Apps</a> you can open the same URL even when you are offline.</li>
+<li>You can always select which files to download in case of torrents or metalinks. Just pause a download and a list icon should appear next to the settings button. To select which files to download before starting the download, give the flag –pause-metadata to aria2. See <a href="https://aria2.github.io/manual/en/html/aria2c.html#cmdoption--pause-metadata" target="_blank" rel="noopener">link</a></li>
+</ul>
+<h4 id="yangshun-tech-interview-handbook"><a href="#yangshun-tech-interview-handbook" class="headerlink" title="yangshun / tech-interview-handbook"></a><a href="https://github.com/yangshun/tech-interview-handbook" target="_blank" rel="noopener">yangshun / tech-interview-handbook</a></h4><p>💯<br>Materials to help you rock your next coding interview<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><ul>
+<li><ul>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/coding-round-overview" target="_blank" rel="noopener">How to prepare</a> for coding interviews</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/cheatsheet" target="_blank" rel="noopener">Interview Cheatsheet</a> - Straight-to-the-point Do’s and Don’ts</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/algorithms/algorithms-introduction" target="_blank" rel="noopener">Algorithm tips and the best practice questions</a> categorized by topic</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/company-interview-formats" target="_blank" rel="noopener">Interview formats</a> of the top tech companies</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/behavioral-questions" target="_blank" rel="noopener">Behavioral questions</a> asked by the top tech companies</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/questions-to-ask" target="_blank" rel="noopener">Good questions to ask your interviewers</a> at the end of the interviews</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/resume" target="_blank" rel="noopener">Helpful resume tips</a> to get your resume noticed and the Do’s and Don’ts</li>
+<li>A <a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener">Docusaurus</a> website has been created to provide a better reading experience. Check out the website <a href="https://yangshun.github.io/tech-interview-handbook/" target="_blank" rel="noopener">here</a>!</li>
+</ul>
+<h4 id="agalwood-Motrix"><a href="#agalwood-Motrix" class="headerlink" title="agalwood / Motrix"></a><a href="https://github.com/agalwood/Motrix" target="_blank" rel="noopener">agalwood / Motrix</a></h4><p>A full-featured download manager.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://aria2.github.io/" target="_blank" rel="noopener">Aria2</a> (Note: macOS and Linux versions use 64-bit aria2c, Windows version uses 32-bit)</li>
+</ul>
+<h4 id="laurent22-joplin"><a href="#laurent22-joplin" class="headerlink" title="laurent22 / joplin"></a><a href="https://github.com/laurent22/joplin" target="_blank" rel="noopener">laurent22 / joplin</a></h4><p>Joplin - a note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS. Forum: <a href="https://discourse.joplinapp.org/" target="_blank" rel="noopener">https://discourse.joplinapp.org/</a><br>  <strong>Release</strong><br>Windows (32 and 64-bit)         | <a href="https://github.com/laurent22/joplin/releases/download/v1.0.160/Joplin-Setup-1.0.160.exe" target="_blank" rel="noopener"><img alt="Get it on Windows" width="134px" src="https://joplinapp.org/images/BadgeWindows.png"></a> | Or get the <a href="https://github.com/laurent22/joplin/releases/download/v1.0.160/JoplinPortable.exe" target="_blank" rel="noopener">Portable version</a><br><br>The <a href="https://en.wikipedia.org/wiki/Portable_application" target="_blank" rel="noopener">portable application</a> allows installing the software on a portable device such as a USB key. Simply copy the file JoplinPortable.exe in any directory on that USB key ; the application will then create a directory called “JoplinProfile” next to the executable file.<br>macOS          | <a href="https://github.com/laurent22/joplin/releases/download/v1.0.160/Joplin-1.0.160.dmg" target="_blank" rel="noopener"><img alt="Get it on macOS" width="134px" src="https://joplinapp.org/images/BadgeMacOS.png"></a> | You can also use Homebrew: <code>brew cask install joplin</code><br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>| <a href="https://github.com/RedBug312/markdown-it-multimd-table" target="_blank" rel="noopener">Multitable</a> | See <a href="https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html" target="_blank" rel="noopener">MultiMarkdown</a> page | Adds more power and customization to markdown tables | no |</li>
+<li>Math expressions can be added using the <a href="https://khan.github.io/KaTeX/" target="_blank" rel="noopener">KaTeX notation</a>. To add an inline equation, wrap the expression in <code>$EXPRESSION$</code>, eg. <code>$\sqrt{3x-1}+(1+x)^2$</code>. To create an expression block, wrap it as follow:</li>
+</ul>
+<h4 id="r-spacex-SpaceX-API"><a href="#r-spacex-SpaceX-API" class="headerlink" title="r-spacex / SpaceX-API"></a><a href="https://github.com/r-spacex/SpaceX-API" target="_blank" rel="noopener">r-spacex / SpaceX-API</a></h4><p>🚀<br>Open Source REST API for rocket, core, capsule, pad, and launch data<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>Using <a href="https://facebook.github.io/jest/" target="_blank" rel="noopener">Jest</a> and <a href="https://github.com/visionmedia/supertest" target="_blank" rel="noopener">Supertest</a> for tests</li>
+</ul>
+<h3 id="go"><a href="#go" class="headerlink" title="go"></a>go</h3><h4 id="miekg-dns"><a href="#miekg-dns" class="headerlink" title="miekg / dns"></a><a href="https://github.com/miekg/dns" target="_blank" rel="noopener">miekg / dns</a></h4><p>DNS library in Go<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://mesosphere.github.io/mesos-dns/" target="_blank" rel="noopener">https://mesosphere.github.io/mesos-dns/</a></li>
+</ul>
 
             </div>
             <hr/>
@@ -400,9 +483,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《SAS中如何通过决策树选择重要入选变量》
+                    《Github Trending and Good Stuff 2019-08-13》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/29/how-sas-em-select-important-variables-by-decision-tree/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/13/github-trending-and-good-stuff-2019-08-13/" property="cc:attributionName"
                rel="cc:attributionURL">
                 KevinZhang
             </a> 采用
@@ -464,29 +547,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/05/github-trending-and-good-stuff-2019-08-05/">
+                <a href="/2019/08/13/github-trending-and-good-stuff-2019-08-13/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-05">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-13">
                         
-                        <span class="card-title">Github Trending and Good Stuff 2019-08-05</span>
+                        <span class="card-title">Github Trending and Good Stuff 2019-08-13</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            jupyter-notebookjakevdp / PythonDataScienceHandbookPython Data Science Handbook: full text in Jupyter Notebooks  Good St
+                            jupyter-notebookhscspring / All4NLPAll For NLP, especially Chinese.  Good Stuff
+
+ryan mcdonald, Ryan McDonald - Google S
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -495,6 +581,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -529,27 +616,24 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/25/an-excel-machine-learning-approach-for-score-modeing/">
+                <a href="/2019/08/12/github-trending-and-good-stuff-2019-08-12/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="使用Excel建立机器学习评分模型">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-12">
                         
-                        <span class="card-title">使用Excel建立机器学习评分模型</span>
+                        <span class="card-title">Github Trending and Good Stuff 2019-08-12</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用Excel建立机器学习评分模型准备写一份材料关于《使用Excel建立机器学习评分模型》，成型的Excel模板已经有了（笔者自己开发的），具体的一些效果截屏见文末。就是不知道有多少人愿意了解？
-以下是材料大纲：
-为什么使用Excel
-Ex
+                            jupyter-notebookpythonytdl-org / youtube-dlCommand-line program to download videos from YouTube.com and other video site
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-12
                             </span>
                         <span class="publish-author">
                             
@@ -562,12 +646,24 @@ Ex
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/Github-Trending/" target="_blank">
+                        <span class="chip bg-color">Github Trending</span>
+                    </a>
+                    
                     <a href="/tags/machine-learning/" target="_blank">
                         <span class="chip bg-color">machine learning</span>
                     </a>
                     
                     <a href="/tags/机器学习/" target="_blank">
                         <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/good-stuff/" target="_blank">
+                        <span class="chip bg-color">good stuff</span>
+                    </a>
+                    
+                    <a href="/tags/相关材料/" target="_blank">
+                        <span class="chip bg-color">相关材料</span>
                     </a>
                     
                 </div>

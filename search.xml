@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Github Trending and Good Stuff 2019-08-13</title>
+      <link href="/2019/08/13/github-trending-and-good-stuff-2019-08-13/"/>
+      <url>/2019/08/13/github-trending-and-good-stuff-2019-08-13/</url>
+      
+        <content type="html"><![CDATA[<h3 id="jupyter-notebook"><a href="#jupyter-notebook" class="headerlink" title="jupyter-notebook"></a>jupyter-notebook</h3><h4 id="hscspring-All4NLP"><a href="#hscspring-All4NLP" class="headerlink" title="hscspring / All4NLP"></a><a href="https://github.com/hscspring/All4NLP" target="_blank" rel="noopener">hscspring / All4NLP</a></h4><p>All For NLP, especially Chinese.<br>  <strong>Good Stuff</strong></p><ul><li><a href="https://ryanmcd.github.io/" target="_blank" rel="noopener">ryan mcdonald</a>, <a href="https://scholar.google.com/citations?user=i05BhUgAAAAJ&hl=en" target="_blank" rel="noopener">Ryan McDonald - Google Scholar Citations</a></li></ul><h4 id="Mikoto10032-DeepLearning"><a href="#Mikoto10032-DeepLearning" class="headerlink" title="Mikoto10032 / DeepLearning"></a><a href="https://github.com/Mikoto10032/DeepLearning" target="_blank" rel="noopener">Mikoto10032 / DeepLearning</a></h4><p>深度学习入门教程&amp;&amp;优秀文章&amp;&amp;Deep Learning Tutorial<br>  <strong>Good Stuff</strong></p><ul><li><a href="https://handong1587.github.io/categories.html#deep_learning-ref" target="_blank" rel="noopener">hangdong的深度学习博客,论文推荐</a></li><li><a href="http://colah.github.io/" target="_blank" rel="noopener">3. colah’s blog</a></li><li><a href="https://buptldy.github.io/2016/10/29/2016-10-29-deconv/" target="_blank" rel="noopener">反卷积</a> </li><li><a href="https://bindog.github.io/blog/2018/02/10/model-explanation/" target="_blank" rel="noopener">凭什么相信CNN的结果?–可视化</a>                </li><li><ul><li><a href="https://bindog.github.io/blog/2018/02/10/model-explanation/" target="_blank" rel="noopener">凭什么相信你，我的CNN模型？（篇一：CAM和Grad-CAM)</a></li></ul></li><li><ul><li><a href="http://bindog.github.io/blog/2018/02/11/model-explanation-2/" target="_blank" rel="noopener">凭什么相信你，我的CNN模型？（篇二：万金油LIME)</a></li></ul></li><li><a href="https://mlelarge.github.io/dataflowr-web/cea_edf_inria.html" target="_blank" rel="noopener">Hands-on tour to deep learning with PyTorch</a></li><li><a href="https://handong1587.github.io/deep_learning/2017/12/18/keep-up-with-new-trends.html" target="_blank" rel="noopener">Keep Up With New Trends</a></li><li><a href="https://xpqiu.github.io/slides/20181019-PaperWriting.pdf" target="_blank" rel="noopener">如何端到端地写科研论文-邱锡鹏</a></li></ul><h3 id="python"><a href="#python" class="headerlink" title="python"></a>python</h3><h4 id="ytdl-org-youtube-dl"><a href="#ytdl-org-youtube-dl" class="headerlink" title="ytdl-org / youtube-dl"></a><a href="https://github.com/ytdl-org/youtube-dl" target="_blank" rel="noopener">ytdl-org / youtube-dl</a></h4><p>Command-line program to download videos from YouTube.com and other video sites<br>  <strong>Release</strong><br>Windows users can <a href="https://yt-dl.org/latest/youtube-dl.exe" target="_blank" rel="noopener">download an .exe file</a> and place it in any location on their <a href="https://en.wikipedia.org/wiki/PATH_%28variable%29" target="_blank" rel="noopener">PATH</a> except for <code>%SYSTEMROOT%\System32</code> (e.g. <strong>do not</strong> put in <code>C:\Windows\System32</code>).<br>  <strong>Good Stuff</strong></p><ul><li>Alternatively, refer to the <a href="#developer-instructions">developer instructions</a> for how to check out and work with the git repository. For further options, including PGP signatures, see the <a href="https://ytdl-org.github.io/youtube-dl/download.html" target="_blank" rel="noopener">youtube-dl Download Page</a>.</li><li>If you’ve followed <a href="https://ytdl-org.github.io/youtube-dl/download.html" target="_blank" rel="noopener">our manual installation instructions</a>, you can simply run <code>youtube-dl -U</code> (or, on Linux, <code>sudo youtube-dl -U</code>).</li><li>Afterwards, simply follow <a href="https://ytdl-org.github.io/youtube-dl/download.html" target="_blank" rel="noopener">our manual installation instructions</a>:</li><li>In particular, the generic extractor (used when your website is not in the <a href="https://ytdl-org.github.io/youtube-dl/supportedsites.html" target="_blank" rel="noopener">list of supported sites by youtube-dl</a> cannot mandate one specific downloader.</li><li>Most users do not need to build youtube-dl and can <a href="https://ytdl-org.github.io/youtube-dl/download.html" target="_blank" rel="noopener">download the builds</a> or get them from their distribution.</li></ul><h4 id="donnemartin-system-design-primer"><a href="#donnemartin-system-design-primer" class="headerlink" title="donnemartin / system-design-primer"></a><a href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener">donnemartin / system-design-primer</a></h4><p>Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.<br>  <strong>Good Stuff</strong></p><ul><li><a href="http://dancres.github.io/Pages/" target="_blank" rel="noopener">A distributed systems reading list</a></li></ul><h4 id="ranger-ranger"><a href="#ranger-ranger" class="headerlink" title="ranger / ranger"></a><a href="https://github.com/ranger/ranger" target="_blank" rel="noopener">ranger / ranger</a></h4><p>A VIM-inspired filemanager for the console<br>  <strong>Good Stuff</strong></p><ul><li><ul><li>Website:     <a href="https://ranger.github.io/" target="_blank" rel="noopener">https://ranger.github.io/</a></li></ul></li><li>Download:    <a href="https://ranger.github.io/ranger-stable.tar.gz" target="_blank" rel="noopener">https://ranger.github.io/ranger-stable.tar.gz</a></li></ul><h4 id="instagrambot-instabot"><a href="#instagrambot-instabot" class="headerlink" title="instagrambot / instabot"></a><a href="https://github.com/instagrambot/instabot" target="_blank" rel="noopener">instagrambot / instabot</a></h4><p>🐙<br>Free Instagram scripts, bots and Python API wrapper. Get free instagram followers with our auto like, auto follow and other scripts!<br>  <strong>Good Stuff</strong></p><ul><li><a href="https://instagrambot.github.io/docs/" target="_blank" rel="noopener">Read the Docs</a> | <a href="https://github.com/instagrambot/docs/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute</a></li><li>or see <a href="https://instagrambot.github.io/docs/en/#installation" target="_blank" rel="noopener">this</a> for more details.</li></ul><h4 id="RustPython-RustPython"><a href="#RustPython-RustPython" class="headerlink" title="RustPython / RustPython"></a><a href="https://github.com/RustPython/RustPython" target="_blank" rel="noopener">RustPython / RustPython</a></h4><p>A Python Interpreter written in Rust<br>  <strong>Good Stuff</strong></p><ul><li>Check out our <a href="https://rustpython.github.io/demo/" target="_blank" rel="noopener">online demo</a> running on WebAssembly.</li></ul><h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><h4 id="ziahamza-webui-aria2"><a href="#ziahamza-webui-aria2" class="headerlink" title="ziahamza / webui-aria2"></a><a href="https://github.com/ziahamza/webui-aria2" target="_blank" rel="noopener">ziahamza / webui-aria2</a></h4><p>The aim for this project is to create the worlds best and hottest interface to interact with aria2. Very simple to use, just download and open index.html in any web browser.<br>  <strong>Good Stuff</strong></p><ul><li>If aria2 is not installed in your local machine then head on to <a href="https://aria2.github.io/" target="_blank" rel="noopener">https://aria2.github.io/</a> and follow the instructions there.</li><li>Or you could just head on to <a href="https://ziahamza.github.io/webui-aria2" target="_blank" rel="noopener">https://ziahamza.github.io/webui-aria2</a> and start downloading files! Once you have visited the URL thanks to <a href="https://developers.google.com/web/progressive-web-apps/" target="_blank" rel="noopener">Progressive Web Apps</a> you can open the same URL even when you are offline.</li><li>You can always select which files to download in case of torrents or metalinks. Just pause a download and a list icon should appear next to the settings button. To select which files to download before starting the download, give the flag –pause-metadata to aria2. See <a href="https://aria2.github.io/manual/en/html/aria2c.html#cmdoption--pause-metadata" target="_blank" rel="noopener">link</a></li></ul><h4 id="yangshun-tech-interview-handbook"><a href="#yangshun-tech-interview-handbook" class="headerlink" title="yangshun / tech-interview-handbook"></a><a href="https://github.com/yangshun/tech-interview-handbook" target="_blank" rel="noopener">yangshun / tech-interview-handbook</a></h4><p>💯<br>Materials to help you rock your next coding interview<br>  <strong>Good Stuff</strong></p><ul><li><ul><li><ul><li><a href="https://yangshun.github.io/tech-interview-handbook/coding-round-overview" target="_blank" rel="noopener">How to prepare</a> for coding interviews</li></ul></li></ul></li><li><a href="https://yangshun.github.io/tech-interview-handbook/cheatsheet" target="_blank" rel="noopener">Interview Cheatsheet</a> - Straight-to-the-point Do’s and Don’ts</li><li><a href="https://yangshun.github.io/tech-interview-handbook/algorithms/algorithms-introduction" target="_blank" rel="noopener">Algorithm tips and the best practice questions</a> categorized by topic</li><li><a href="https://yangshun.github.io/tech-interview-handbook/company-interview-formats" target="_blank" rel="noopener">Interview formats</a> of the top tech companies</li><li><a href="https://yangshun.github.io/tech-interview-handbook/behavioral-questions" target="_blank" rel="noopener">Behavioral questions</a> asked by the top tech companies</li><li><a href="https://yangshun.github.io/tech-interview-handbook/questions-to-ask" target="_blank" rel="noopener">Good questions to ask your interviewers</a> at the end of the interviews</li><li><a href="https://yangshun.github.io/tech-interview-handbook/resume" target="_blank" rel="noopener">Helpful resume tips</a> to get your resume noticed and the Do’s and Don’ts</li><li>A <a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener">Docusaurus</a> website has been created to provide a better reading experience. Check out the website <a href="https://yangshun.github.io/tech-interview-handbook/" target="_blank" rel="noopener">here</a>!</li></ul><h4 id="agalwood-Motrix"><a href="#agalwood-Motrix" class="headerlink" title="agalwood / Motrix"></a><a href="https://github.com/agalwood/Motrix" target="_blank" rel="noopener">agalwood / Motrix</a></h4><p>A full-featured download manager.<br>  <strong>Good Stuff</strong></p><ul><li><a href="https://aria2.github.io/" target="_blank" rel="noopener">Aria2</a> (Note: macOS and Linux versions use 64-bit aria2c, Windows version uses 32-bit)</li></ul><h4 id="laurent22-joplin"><a href="#laurent22-joplin" class="headerlink" title="laurent22 / joplin"></a><a href="https://github.com/laurent22/joplin" target="_blank" rel="noopener">laurent22 / joplin</a></h4><p>Joplin - a note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS. Forum: <a href="https://discourse.joplinapp.org/" target="_blank" rel="noopener">https://discourse.joplinapp.org/</a><br>  <strong>Release</strong><br>Windows (32 and 64-bit)         | <a href="https://github.com/laurent22/joplin/releases/download/v1.0.160/Joplin-Setup-1.0.160.exe" target="_blank" rel="noopener"><img alt="Get it on Windows" width="134px" src="https://joplinapp.org/images/BadgeWindows.png"></a> | Or get the <a href="https://github.com/laurent22/joplin/releases/download/v1.0.160/JoplinPortable.exe" target="_blank" rel="noopener">Portable version</a><br><br>The <a href="https://en.wikipedia.org/wiki/Portable_application" target="_blank" rel="noopener">portable application</a> allows installing the software on a portable device such as a USB key. Simply copy the file JoplinPortable.exe in any directory on that USB key ; the application will then create a directory called “JoplinProfile” next to the executable file.<br>macOS          | <a href="https://github.com/laurent22/joplin/releases/download/v1.0.160/Joplin-1.0.160.dmg" target="_blank" rel="noopener"><img alt="Get it on macOS" width="134px" src="https://joplinapp.org/images/BadgeMacOS.png"></a> | You can also use Homebrew: <code>brew cask install joplin</code><br>  <strong>Good Stuff</strong></p><ul><li>| <a href="https://github.com/RedBug312/markdown-it-multimd-table" target="_blank" rel="noopener">Multitable</a> | See <a href="https://fletcher.github.io/MultiMarkdown-6/syntax/tables.html" target="_blank" rel="noopener">MultiMarkdown</a> page | Adds more power and customization to markdown tables | no |</li><li>Math expressions can be added using the <a href="https://khan.github.io/KaTeX/" target="_blank" rel="noopener">KaTeX notation</a>. To add an inline equation, wrap the expression in <code>$EXPRESSION$</code>, eg. <code>$\sqrt{3x-1}+(1+x)^2$</code>. To create an expression block, wrap it as follow:</li></ul><h4 id="r-spacex-SpaceX-API"><a href="#r-spacex-SpaceX-API" class="headerlink" title="r-spacex / SpaceX-API"></a><a href="https://github.com/r-spacex/SpaceX-API" target="_blank" rel="noopener">r-spacex / SpaceX-API</a></h4><p>🚀<br>Open Source REST API for rocket, core, capsule, pad, and launch data<br>  <strong>Good Stuff</strong></p><ul><li>Using <a href="https://facebook.github.io/jest/" target="_blank" rel="noopener">Jest</a> and <a href="https://github.com/visionmedia/supertest" target="_blank" rel="noopener">Supertest</a> for tests</li></ul><h3 id="go"><a href="#go" class="headerlink" title="go"></a>go</h3><h4 id="miekg-dns"><a href="#miekg-dns" class="headerlink" title="miekg / dns"></a><a href="https://github.com/miekg/dns" target="_blank" rel="noopener">miekg / dns</a></h4><p>DNS library in Go<br>  <strong>Good Stuff</strong></p><ul><li><a href="https://mesosphere.github.io/mesos-dns/" target="_blank" rel="noopener">https://mesosphere.github.io/mesos-dns/</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Github Trending </tag>
+            
+            <tag> machine learning </tag>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> good stuff </tag>
+            
+            <tag> 相关材料 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Github Trending and Good Stuff 2019-08-12</title>
       <link href="/2019/08/12/github-trending-and-good-stuff-2019-08-12/"/>
       <url>/2019/08/12/github-trending-and-good-stuff-2019-08-12/</url>
@@ -14,11 +41,11 @@
       
         <tags>
             
+            <tag> Github Trending </tag>
+            
             <tag> machine learning </tag>
             
             <tag> 机器学习 </tag>
-            
-            <tag> Github Trending </tag>
             
             <tag> good stuff </tag>
             
@@ -41,11 +68,11 @@
       
         <tags>
             
+            <tag> Github Trending </tag>
+            
             <tag> machine learning </tag>
             
             <tag> 机器学习 </tag>
-            
-            <tag> Github Trending </tag>
             
             <tag> good stuff </tag>
             
@@ -68,11 +95,11 @@
       
         <tags>
             
+            <tag> Github Trending </tag>
+            
             <tag> machine learning </tag>
             
             <tag> 机器学习 </tag>
-            
-            <tag> Github Trending </tag>
             
             <tag> good stuff </tag>
             
@@ -95,11 +122,11 @@
       
         <tags>
             
+            <tag> Github Trending </tag>
+            
             <tag> machine learning </tag>
             
             <tag> 机器学习 </tag>
-            
-            <tag> Github Trending </tag>
             
             <tag> good stuff </tag>
             
@@ -122,11 +149,11 @@
       
         <tags>
             
+            <tag> Github Trending </tag>
+            
             <tag> machine learning </tag>
             
             <tag> 机器学习 </tag>
-            
-            <tag> Github Trending </tag>
             
             <tag> good stuff </tag>
             
@@ -149,11 +176,11 @@
       
         <tags>
             
+            <tag> Github Trending </tag>
+            
             <tag> machine learning </tag>
             
             <tag> 机器学习 </tag>
-            
-            <tag> Github Trending </tag>
             
             <tag> good stuff </tag>
             
