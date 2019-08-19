@@ -1,0 +1,886 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Github Trending and Good Stuff 2019-08-19, machine learning, 机器学习, modeling, 建模, scoring, 评分">
+    <meta name="description" content="jupyter-notebookjakevdp / PythonDataScienceHandbookPython Data Science Handbook: full text in Jupyter Notebooks  Good St">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Github Trending and Good Stuff 2019-08-19 | KevinZhang&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">KevinZhang's Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">KevinZhang's Blog</div>
+        <div class="logo-desc">
+            
+            非著名数据分析师
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Github Trending and Good Stuff 2019-08-19
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Github-Trending/" target="_blank">
+                                <span class="chip bg-color">Github Trending</span>
+                            </a>
+                        
+                            <a href="/tags/machine-learning/" target="_blank">
+                                <span class="chip bg-color">machine learning</span>
+                            </a>
+                        
+                            <a href="/tags/机器学习/" target="_blank">
+                                <span class="chip bg-color">机器学习</span>
+                            </a>
+                        
+                            <a href="/tags/good-stuff/" target="_blank">
+                                <span class="chip bg-color">good stuff</span>
+                            </a>
+                        
+                            <a href="/tags/相关材料/" target="_blank">
+                                <span class="chip bg-color">相关材料</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-08-19
+                </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="jupyter-notebook"><a href="#jupyter-notebook" class="headerlink" title="jupyter-notebook"></a>jupyter-notebook</h3><h4 id="jakevdp-PythonDataScienceHandbook"><a href="#jakevdp-PythonDataScienceHandbook" class="headerlink" title="jakevdp / PythonDataScienceHandbook"></a><a href="https://github.com/jakevdp/PythonDataScienceHandbook" target="_blank" rel="noopener">jakevdp / PythonDataScienceHandbook</a></h4><p>Python Data Science Handbook: full text in Jupyter Notebooks<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>Read the book in its entirety online at <a href="https://jakevdp.github.io/PythonDataScienceHandbook/" target="_blank" rel="noopener">https://jakevdp.github.io/PythonDataScienceHandbook/</a></li>
+</ul>
+<h4 id="udacity-deep-learning"><a href="#udacity-deep-learning" class="headerlink" title="udacity / deep-learning"></a><a href="https://github.com/udacity/deep-learning" target="_blank" rel="noopener">udacity / deep-learning</a></h4><p>Repo for the Deep Learning Nanodegree Foundations program.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://github.com/udacity/deep-learning/tree/master/sentiment-network" target="_blank" rel="noopener">Sentiment Analysis with Numpy</a>: <a href="http://iamtrask.github.io/" target="_blank" rel="noopener">Andrew Trask</a> leads you through building a sentiment analysis model, predicting if some text is positive or negative.</li>
+</ul>
+<h4 id="udacity-deep-learning-v2-pytorch"><a href="#udacity-deep-learning-v2-pytorch" class="headerlink" title="udacity / deep-learning-v2-pytorch"></a><a href="https://github.com/udacity/deep-learning-v2-pytorch" target="_blank" rel="noopener">udacity / deep-learning-v2-pytorch</a></h4><p>Projects and exercises for the latest Deep Learning ND program <a href="https://www.udacity.com/course/deep-learning-nanodegree--nd101" target="_blank" rel="noopener">https://www.udacity.com/course/deep-learning-nanodegree--nd101</a><br>  <strong>Release</strong><br>[win64]: <a href="https://repo.continuum.io/miniconda/Miniconda3-latest-Windows-x86_64.exe" target="_blank" rel="noopener">https://repo.continuum.io/miniconda/Miniconda3-latest-Windows-x86_64.exe</a><br>[win32]: <a href="https://repo.continuum.io/miniconda/Miniconda3-latest-Windows-x86.exe" target="_blank" rel="noopener">https://repo.continuum.io/miniconda/Miniconda3-latest-Windows-x86.exe</a><br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://github.com/udacity/deep-learning-v2-pytorch/tree/master/sentiment-analysis-network" target="_blank" rel="noopener">Sentiment Analysis with NumPy</a>: <a href="http://iamtrask.github.io/" target="_blank" rel="noopener">Andrew Trask</a> leads you through building a sentiment analysis model, predicting if some text is positive or negative.</li>
+</ul>
+<h4 id="justmarkham-pandas-videos"><a href="#justmarkham-pandas-videos" class="headerlink" title="justmarkham / pandas-videos"></a><a href="https://github.com/justmarkham/pandas-videos" target="_blank" rel="noopener">justmarkham / pandas-videos</a></h4><p>Jupyter notebook and datasets from the pandas Q&amp;A video series<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="data/ufo.csv">ufo.csv</a> | Reports of UFO sightings from 1930-2000 | <a href="http://bit.ly/uforeports" target="_blank" rel="noopener">bit.ly/uforeports</a> | <a href="http://www.nuforc.org/webreports.html" target="_blank" rel="noopener">National UFO Reporting Center</a> | <a href="https://github.com/josiahdavis/josiahdavis.github.io/blob/master/supporting%20material/get_ufo_data.py" target="_blank" rel="noopener">Web scraping script</a></li>
+</ul>
+<h3 id="python"><a href="#python" class="headerlink" title="python"></a>python</h3><h3 id="swift"><a href="#swift" class="headerlink" title="swift"></a>swift</h3><h4 id="Juanpe-About-SwiftUI"><a href="#Juanpe-About-SwiftUI" class="headerlink" title="Juanpe / About-SwiftUI"></a><a href="https://github.com/Juanpe/About-SwiftUI" target="_blank" rel="noopener">Juanpe / About-SwiftUI</a></h4><p>Gathering all info published, both by Apple and by others, about new framework SwiftUI.<br>  <strong>Release</strong></p>
+<ul>
+<li><strong><a href="https://developer.apple.com/services-account/download?path=/WWDC_2019/macOS_10.15_Developer_Beta_Access_Utility/macOSDeveloperBetaAccessUtility.dmg" target="_blank" rel="noopener">MacOS Catalina 10.15 Beta</a></strong><br><strong>Good Stuff</strong><ul>
+<li><strong><a href="https://heckj.github.io/swiftui-notes/" target="_blank" rel="noopener">Using Combine</a></strong></li>
+<li><strong><a href="https://mecid.github.io/2019/06/05/swiftui-making-real-world-app/" target="_blank" rel="noopener">Making real-world app with SwiftUI</a></strong> by <a href="https://twitter.com/mecid" target="_blank" rel="noopener">Majid Jabrayilov</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="yanue-V2rayU"><a href="#yanue-V2rayU" class="headerlink" title="yanue / V2rayU"></a><a href="https://github.com/yanue/V2rayU" target="_blank" rel="noopener">yanue / V2rayU</a></h4><p>V2rayU,基于v2ray核心的mac版客户端,用于科学上网,使用swift4.2编写,支持vmess,shadowsocks,socks5等服务协议,支持订阅, 支持二维码,剪贴板导入,手动配置,二维码分享等<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>v2ray配置指南: <a href="https://toutyrater.github.io/" target="_blank" rel="noopener">https://toutyrater.github.io/</a></li>
+</ul>
+<h4 id="LoopKit-Loop"><a href="#LoopKit-Loop" class="headerlink" title="LoopKit / Loop"></a><a href="https://github.com/LoopKit/Loop" target="_blank" rel="noopener">LoopKit / Loop</a></h4><p>An automated insulin delivery app template for iOS, built on LoopKit<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>Please visit the <a href="https://loopkit.github.io/loopdocs/" target="_blank" rel="noopener">Loop Docs</a> for installation, algorithm, and other details.</li>
+</ul>
+<h4 id="vsouza-awesome-ios"><a href="#vsouza-awesome-ios" class="headerlink" title="vsouza / awesome-ios"></a><a href="https://github.com/vsouza/awesome-ios" target="_blank" rel="noopener">vsouza / awesome-ios</a></h4><p>A curated list of awesome iOS ecosystem, including Objective-C and Swift Projects<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://swifteducation.github.io/teaching_app_development_with_swift/" target="_blank" rel="noopener">Swifteducation - Teaching App Development with Swift</a></li>
+<li><a href="http://akordadev.github.io/AutoLayoutMagic/" target="_blank" rel="noopener">Auto Layout Magic</a> - Build 1 scene, let Auto Layout Magic generate the  constraints for you!  Scenes look great across all devices!</li>
+<li><a href="https://bustoutsolutions.github.io/siesta/" target="_blank" rel="noopener">Siesta</a> - Elegant abstraction for RESTful resources that untangles stateful messes. An alternative to callback- and delegate-based networking.</li>
+<li><a href="http://ios-driver.github.io/ios-driver/index.html" target="_blank" rel="noopener">ios-driver</a> - Test any iOS native, hybrid, or mobile web application using Selenium / WebDriver.</li>
+<li><a href="http://sap-production.github.io/xcode-maven-plugin/site/" target="_blank" rel="noopener">Xcode Maven</a> - The Xcode Maven Plugin can be used in order to run Xcode builds embedded in a Maven lifecycle.</li>
+<li><a href="https://erenkabakci.github.io/WWDC-Recap/" target="_blank" rel="noopener">WWDC-Recap</a> - A collection of session summaries in markdown format, from WWDC 19 &amp; 17.</li>
+<li><a href="https://swiftweekly.github.io/" target="_blank" rel="noopener">Swift Weekly Brief</a> - A community-driven weekly newsletter about Swift.org. Curated by Jesse Squires and published for free every Thursday</li>
+</ul>
+<h4 id="dkhamsing-open-source-ios-apps"><a href="#dkhamsing-open-source-ios-apps" class="headerlink" title="dkhamsing / open-source-ios-apps"></a><a href="https://github.com/dkhamsing/open-source-ios-apps" target="_blank" rel="noopener">dkhamsing / open-source-ios-apps</a></h4><p>📱<br>Collaborative List of Open-Source iOS Apps<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://pisth.github.io" target="_blank" rel="noopener">https://pisth.github.io</a><br>  Added January 12, 2018<br>  License: <a href="http://choosealicense.com/licenses/apache-2.0/" target="_blank" rel="noopener"><code>apache-2.0</code></a><br></li>
+<li><ul>
+<li><ul>
+<li><a href="https://marty-suzuki.github.io/ArtShredder/" target="_blank" rel="noopener">https://marty-suzuki.github.io/ArtShredder/</a><br>  Added December 10, 2018<br>  License: <a href="http://choosealicense.com/licenses/mit/" target="_blank" rel="noopener"><code>mit</code></a><br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://marty-suzuki.github.io/ArtShredder/" target="_blank" rel="noopener">https://marty-suzuki.github.io/ArtShredder/</a><br>  Added December 10, 2018<br>  License: <a href="http://choosealicense.com/licenses/mit/" target="_blank" rel="noopener"><code>mit</code></a><br></li>
+<li><ul>
+<li><a href="https://mssun.github.io/passforios/" target="_blank" rel="noopener">https://mssun.github.io/passforios/</a><br>  Added May 30, 2017<br>  License: <a href="http://choosealicense.com/licenses/mit/" target="_blank" rel="noopener"><code>mit</code></a><br></li>
+</ul>
+</li>
+<li><a href="http://facebook.github.io/react-native/" target="_blank" rel="noopener">http://facebook.github.io/react-native/</a> — <a href="#readme">back to top</a> </li>
+<li></li>
+</ul>
+<h4 id="Skyscanner-SkyFloatingLabelTextField"><a href="#Skyscanner-SkyFloatingLabelTextField" class="headerlink" title="Skyscanner / SkyFloatingLabelTextField"></a><a href="https://github.com/Skyscanner/SkyFloatingLabelTextField" target="_blank" rel="noopener">Skyscanner / SkyFloatingLabelTextField</a></h4><p>A beautiful and flexible text field control implementation of “Float Label Pattern”. Written in Swift.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><ul>
+<li>textField1.iconText = “\u{f072}” // plane icon as per <a href="https://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank" rel="noopener">https://fortawesome.github.io/Font-Awesome/cheatsheet/</a></li>
+</ul>
+</li>
+<li>textField2.iconText = “\u{f072}” // plane icon as per <a href="https://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank" rel="noopener">https://fortawesome.github.io/Font-Awesome/cheatsheet/</a></li>
+</ul>
+<h4 id="apple-swift-nio"><a href="#apple-swift-nio" class="headerlink" title="apple / swift-nio"></a><a href="https://github.com/apple/swift-nio" target="_blank" rel="noopener">apple / swift-nio</a></h4><p>Event-driven network application framework for high performance protocol servers &amp; clients, non-blocking.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li>Currently SwiftNIO ships with three <code>Bootstrap</code> objects: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/ServerBootstrap.html" target="_blank" rel="noopener"><code>ServerBootstrap</code></a>, for bootstrapping listening channels; <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/ClientBootstrap.html" target="_blank" rel="noopener"><code>ClientBootstrap</code></a>, for bootstrapping client TCP channels; and <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/DatagramBootstrap.html" target="_blank" rel="noopener"><code>DatagramBootstrap</code></a> for bootstrapping UDP channels.</li>
+<li><ul>
+<li><a href="https://apple.github.io/swift-nio/docs/current/NIO/index.html" target="_blank" rel="noopener">API documentation</a></li>
+</ul>
+</li>
+<li>[ch]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Protocols/ChannelHandler.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Protocols/ChannelHandler.html</a></li>
+<li>[c]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Protocols/Channel.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Protocols/Channel.html</a></li>
+<li>[chc]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/ChannelHandlerContext.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/ChannelHandlerContext.html</a></li>
+<li>[ec]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/EmbeddedChannel.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/EmbeddedChannel.html</a></li>
+<li>[el]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Protocols/EventLoop.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Protocols/EventLoop.html</a></li>
+<li>[eel]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/EmbeddedEventLoop.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/EmbeddedEventLoop.html</a></li>
+<li>[elg]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Protocols/EventLoopGroup.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Protocols/EventLoopGroup.html</a></li>
+<li>[bb]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Structs/ByteBuffer.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Structs/ByteBuffer.html</a></li>
+<li>[elf]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/EventLoopFuture.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/EventLoopFuture.html</a></li>
+<li>[elp]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Structs/EventLoopPromise.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Structs/EventLoopPromise.html</a></li>
+<li>[cp]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/ChannelPipeline.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/ChannelPipeline.html</a></li>
+<li>[mtelg]: <a href="https://apple.github.io/swift-nio/docs/current/NIO/Classes/MultiThreadedEventLoopGroup.html" target="_blank" rel="noopener">https://apple.github.io/swift-nio/docs/current/NIO/Classes/MultiThreadedEventLoopGroup.html</a></li>
+</ul>
+<h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><h4 id="yangshun-tech-interview-handbook"><a href="#yangshun-tech-interview-handbook" class="headerlink" title="yangshun / tech-interview-handbook"></a><a href="https://github.com/yangshun/tech-interview-handbook" target="_blank" rel="noopener">yangshun / tech-interview-handbook</a></h4><p>💯<br>Materials to help you rock your next coding interview<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><ul>
+<li><ul>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/coding-round-overview" target="_blank" rel="noopener">How to prepare</a> for coding interviews</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/cheatsheet" target="_blank" rel="noopener">Interview Cheatsheet</a> - Straight-to-the-point Do’s and Don’ts</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/algorithms/algorithms-introduction" target="_blank" rel="noopener">Algorithm tips and the best practice questions</a> categorized by topic</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/company-interview-formats" target="_blank" rel="noopener">Interview formats</a> of the top tech companies</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/behavioral-questions" target="_blank" rel="noopener">Behavioral questions</a> asked by the top tech companies</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/questions-to-ask" target="_blank" rel="noopener">Good questions to ask your interviewers</a> at the end of the interviews</li>
+<li><a href="https://yangshun.github.io/tech-interview-handbook/resume" target="_blank" rel="noopener">Helpful resume tips</a> to get your resume noticed and the Do’s and Don’ts</li>
+<li>A <a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener">Docusaurus</a> website has been created to provide a better reading experience. Check out the website <a href="https://yangshun.github.io/tech-interview-handbook/" target="_blank" rel="noopener">here</a>!</li>
+</ul>
+<h4 id="vuejs-templates-webpack"><a href="#vuejs-templates-webpack" class="headerlink" title="vuejs-templates / webpack"></a><a href="https://github.com/vuejs-templates/webpack" target="_blank" rel="noopener">vuejs-templates / webpack</a></h4><p>A full-featured Webpack + vue-loader setup with hot reload, linting, testing &amp; css extraction.<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="http://vuejs-templates.github.io/webpack" target="_blank" rel="noopener">For this template</a>: common questions specific to this template are answered and each part is described in greater detail</li>
+<li><code>npm run unit</code>: Unit tests run in <a href="https://github.com/tmpvar/jsdom" target="_blank" rel="noopener">JSDOM</a> with <a href="https://facebook.github.io/jest/" target="_blank" rel="noopener">Jest</a>, or in PhantomJS with Karma + Mocha + karma-webpack.</li>
+</ul>
+<h4 id="Domenicobrz-Blurry"><a href="#Domenicobrz-Blurry" class="headerlink" title="Domenicobrz / Blurry"></a><a href="https://github.com/Domenicobrz/Blurry" target="_blank" rel="noopener">Domenicobrz / Blurry</a></h4><p>Simulating depth of field with particles on a shader<br>  <strong>Good Stuff</strong></p>
+<ul>
+<li><a href="https://domenicobrz.github.io/webgl/projects/DOFlinesrenderer/" target="_blank" rel="noopener">Live demo here</a></li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《Github Trending and Good Stuff 2019-08-19》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/19/github-trending-and-good-stuff-2019-08-19/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                KevinZhang
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC80NTU2Ni8yMjA3Nw==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/08/19/github-trending-and-good-stuff-2019-08-19/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-19">
+                        
+                        <span class="card-title">Github Trending and Good Stuff 2019-08-19</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            jupyter-notebookjakevdp / PythonDataScienceHandbookPython Data Science Handbook: full text in Jupyter Notebooks  Good St
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            KevinZhang
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Github-Trending/" target="_blank">
+                        <span class="chip bg-color">Github Trending</span>
+                    </a>
+                    
+                    <a href="/tags/machine-learning/" target="_blank">
+                        <span class="chip bg-color">machine learning</span>
+                    </a>
+                    
+                    <a href="/tags/机器学习/" target="_blank">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/good-stuff/" target="_blank">
+                        <span class="chip bg-color">good stuff</span>
+                    </a>
+                    
+                    <a href="/tags/相关材料/" target="_blank">
+                        <span class="chip bg-color">相关材料</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/08/15/github-trending-and-good-stuff-2019-08-15/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-15">
+                        
+                        <span class="card-title">Github Trending and Good Stuff 2019-08-15</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            jupyter-notebookslundberg / shapA unified approach to explain the output of any machine learning model.  Good Stuff
+
+NHA
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            KevinZhang
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Github-Trending/" target="_blank">
+                        <span class="chip bg-color">Github Trending</span>
+                    </a>
+                    
+                    <a href="/tags/machine-learning/" target="_blank">
+                        <span class="chip bg-color">machine learning</span>
+                    </a>
+                    
+                    <a href="/tags/机器学习/" target="_blank">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/tags/good-stuff/" target="_blank">
+                        <span class="chip bg-color">good stuff</span>
+                    </a>
+                    
+                    <a href="/tags/相关材料/" target="_blank">
+                        <span class="chip bg-color">相关材料</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+
+            
+            
+
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
