@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-19T02:29:35.644Z</updated>
+  <updated>2019-12-06T09:12:12.900Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>西游记的政治隐喻</title>
+    <link href="http://yoursite.com/2019/12/06/xiyoujidzhengzhi/"/>
+    <id>http://yoursite.com/2019/12/06/xiyoujidzhengzhi/</id>
+    <published>2019-12-06T09:09:03.000Z</published>
+    <updated>2019-12-06T09:12:12.900Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;《西游记》里的政治隐喻&quot;&gt;&lt;a href=&quot;#《西游记》里的政治隐喻&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="政治" scheme="http://yoursite.com/tags/%E6%94%BF%E6%B2%BB/"/>
+    
+      <category term="西游记" scheme="http://yoursite.com/tags/%E8%A5%BF%E6%B8%B8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Github Trending and Good Stuff 2019-08-19</title>
     <link href="http://yoursite.com/2019/08/19/github-trending-and-good-stuff-2019-08-19/"/>
     <id>http://yoursite.com/2019/08/19/github-trending-and-good-stuff-2019-08-19/</id>
     <published>2019-08-19T02:20:57.000Z</published>
-    <updated>2019-08-19T02:29:35.644Z</updated>
+    <updated>2019-08-19T02:29:35.000Z</updated>
     
     <summary type="html">
     
@@ -36,11 +62,11 @@
     </summary>
     
     
-      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
     
       <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
     
@@ -53,7 +79,7 @@
     <link href="http://yoursite.com/2019/08/15/github-trending-and-good-stuff-2019-08-15/"/>
     <id>http://yoursite.com/2019/08/15/github-trending-and-good-stuff-2019-08-15/</id>
     <published>2019-08-15T04:09:05.000Z</published>
-    <updated>2019-08-15T04:10:35.727Z</updated>
+    <updated>2019-08-15T04:10:35.000Z</updated>
     
     <summary type="html">
     
@@ -68,11 +94,11 @@
     </summary>
     
     
-      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
     
       <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
     
@@ -85,7 +111,7 @@
     <link href="http://yoursite.com/2019/08/14/github-trending-and-good-stuff-2019-08-14/"/>
     <id>http://yoursite.com/2019/08/14/github-trending-and-good-stuff-2019-08-14/</id>
     <published>2019-08-14T02:18:12.000Z</published>
-    <updated>2019-08-14T02:27:55.905Z</updated>
+    <updated>2019-08-14T02:27:55.000Z</updated>
     
     <summary type="html">
     
@@ -100,11 +126,11 @@
     </summary>
     
     
-      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
     
       <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
     
@@ -117,7 +143,7 @@
     <link href="http://yoursite.com/2019/08/13/github-trending-and-good-stuff-2019-08-13/"/>
     <id>http://yoursite.com/2019/08/13/github-trending-and-good-stuff-2019-08-13/</id>
     <published>2019-08-13T01:41:29.000Z</published>
-    <updated>2019-08-13T01:45:05.408Z</updated>
+    <updated>2019-08-13T01:45:05.000Z</updated>
     
     <summary type="html">
     
@@ -132,11 +158,11 @@
     </summary>
     
     
-      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
     
       <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
     
@@ -149,7 +175,7 @@
     <link href="http://yoursite.com/2019/08/12/github-trending-and-good-stuff-2019-08-12/"/>
     <id>http://yoursite.com/2019/08/12/github-trending-and-good-stuff-2019-08-12/</id>
     <published>2019-08-12T01:41:17.000Z</published>
-    <updated>2019-08-12T01:50:57.950Z</updated>
+    <updated>2019-08-12T01:50:57.000Z</updated>
     
     <summary type="html">
     
@@ -164,11 +190,11 @@
     </summary>
     
     
-      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
     
       <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
     
@@ -181,7 +207,7 @@
     <link href="http://yoursite.com/2019/08/10/github-trending-and-good-stuff-2019-08-10/"/>
     <id>http://yoursite.com/2019/08/10/github-trending-and-good-stuff-2019-08-10/</id>
     <published>2019-08-10T03:49:28.000Z</published>
-    <updated>2019-08-10T03:54:56.884Z</updated>
+    <updated>2019-08-10T03:54:56.000Z</updated>
     
     <summary type="html">
     
@@ -196,11 +222,11 @@
     </summary>
     
     
-      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
     
       <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
     
@@ -213,7 +239,7 @@
     <link href="http://yoursite.com/2019/08/08/github-trending-and-good-stuff-2019-08-08/"/>
     <id>http://yoursite.com/2019/08/08/github-trending-and-good-stuff-2019-08-08/</id>
     <published>2019-08-08T07:48:58.000Z</published>
-    <updated>2019-08-08T08:16:56.206Z</updated>
+    <updated>2019-08-08T08:16:56.000Z</updated>
     
     <summary type="html">
     
@@ -228,11 +254,11 @@
     </summary>
     
     
-      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
     
       <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
     
@@ -245,7 +271,7 @@
     <link href="http://yoursite.com/2019/08/07/github-trending-and-good-stuff-2019-08-07/"/>
     <id>http://yoursite.com/2019/08/07/github-trending-and-good-stuff-2019-08-07/</id>
     <published>2019-08-07T02:06:39.000Z</published>
-    <updated>2019-08-07T03:01:27.929Z</updated>
+    <updated>2019-08-07T03:01:27.000Z</updated>
     
     <summary type="html">
     
@@ -260,11 +286,11 @@
     </summary>
     
     
-      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
     
       <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
     
@@ -277,7 +303,7 @@
     <link href="http://yoursite.com/2019/08/06/github-trending-and-good-stuff-2019-08-06/"/>
     <id>http://yoursite.com/2019/08/06/github-trending-and-good-stuff-2019-08-06/</id>
     <published>2019-08-06T07:46:15.000Z</published>
-    <updated>2019-08-06T07:55:03.942Z</updated>
+    <updated>2019-08-06T07:55:03.000Z</updated>
     
     <summary type="html">
     
@@ -292,11 +318,11 @@
     </summary>
     
     
-      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
     
       <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
     
@@ -309,7 +335,7 @@
     <link href="http://yoursite.com/2019/08/05/github-trending-and-good-stuff-2019-08-05/"/>
     <id>http://yoursite.com/2019/08/05/github-trending-and-good-stuff-2019-08-05/</id>
     <published>2019-08-05T11:39:34.000Z</published>
-    <updated>2019-08-05T12:22:41.026Z</updated>
+    <updated>2019-08-05T12:22:41.000Z</updated>
     
     <summary type="html">
     
@@ -324,11 +350,11 @@
     </summary>
     
     
-      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
-    
       <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
     
       <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Github Trending" scheme="http://yoursite.com/tags/Github-Trending/"/>
     
       <category term="good stuff" scheme="http://yoursite.com/tags/good-stuff/"/>
     
@@ -341,7 +367,7 @@
     <link href="http://yoursite.com/2019/07/29/how-sas-em-select-important-variables-by-decision-tree/"/>
     <id>http://yoursite.com/2019/07/29/how-sas-em-select-important-variables-by-decision-tree/</id>
     <published>2019-07-29T09:35:48.000Z</published>
-    <updated>2019-07-29T09:37:39.200Z</updated>
+    <updated>2019-07-29T09:37:39.000Z</updated>
     
     <summary type="html">
     
@@ -369,7 +395,7 @@
     <link href="http://yoursite.com/2019/07/25/an-excel-machine-learning-approach-for-score-modeing/"/>
     <id>http://yoursite.com/2019/07/25/an-excel-machine-learning-approach-for-score-modeing/</id>
     <published>2019-07-25T08:54:19.000Z</published>
-    <updated>2019-07-25T08:57:03.434Z</updated>
+    <updated>2019-07-25T08:57:03.000Z</updated>
     
     <summary type="html">
     
@@ -395,7 +421,7 @@
     <link href="http://yoursite.com/2019/07/25/tensorflow-2-0-how-to-do-with-your-code/"/>
     <id>http://yoursite.com/2019/07/25/tensorflow-2-0-how-to-do-with-your-code/</id>
     <published>2019-07-25T06:19:54.000Z</published>
-    <updated>2019-07-25T07:21:17.327Z</updated>
+    <updated>2019-07-25T07:21:17.000Z</updated>
     
     <summary type="html">
     

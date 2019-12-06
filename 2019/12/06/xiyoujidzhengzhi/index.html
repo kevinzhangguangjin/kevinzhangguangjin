@@ -4,12 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="SAS中如何通过决策树选择重要入选变量, machine learning, 机器学习, modeling, 建模, scoring, 评分">
-    <meta name="description" content="SAS中如何通过决策树选择重要入选变量以下在SAS的EM中通过一个案例来说明决策树选择重要变量的过程：
-整体流程图
-上图中从左到右分别为步骤1-4，其中步骤4是神经网络，其实不重要，重要的是前3步，第4步可以是其他节点。
-选择案例数据
-插入">
+    <meta name="keywords" content="西游记的政治隐喻, machine learning, 机器学习, modeling, 建模, scoring, 评分">
+    <meta name="description" content="《西游记》里的政治隐喻《西游记》是大家耳熟能详喜闻乐见的古典名著，上到耄耋老人，下到懵懂孩童，都会或多或少的对师徒四人西天取经的故事有所了解。这样一部尽人皆知的著作，对它的解读也是五花八门，一千个读者心中有一千个哈姆雷特，一万个中国人心中有">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>SAS中如何通过决策树选择重要入选变量 | KevinZhang&#39;s Blog</title>
+    <title>西游记的政治隐喻 | KevinZhang&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -196,13 +192,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        SAS中如何通过决策树选择重要入选变量
+                        西游记的政治隐喻
                     </div>
                 </div>
             </div>
@@ -313,16 +309,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/machine-learning/" target="_blank">
-                                <span class="chip bg-color">machine learning</span>
+                            <a href="/tags/政治/" target="_blank">
+                                <span class="chip bg-color">政治</span>
                             </a>
                         
-                            <a href="/tags/机器学习/" target="_blank">
-                                <span class="chip bg-color">机器学习</span>
-                            </a>
-                        
-                            <a href="/tags/SAS/" target="_blank">
-                                <span class="chip bg-color">SAS</span>
+                            <a href="/tags/西游记/" target="_blank">
+                                <span class="chip bg-color">西游记</span>
                             </a>
                         
                     </div>
@@ -336,7 +328,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-29
+                    2019-12-06
                 </div>
 
                 
@@ -352,20 +344,26 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="SAS中如何通过决策树选择重要入选变量"><a href="#SAS中如何通过决策树选择重要入选变量" class="headerlink" title="SAS中如何通过决策树选择重要入选变量"></a>SAS中如何通过决策树选择重要入选变量</h1><p>以下在SAS的EM中通过一个案例来说明决策树选择重要变量的过程：</p>
-<h2 id="整体流程图"><a href="#整体流程图" class="headerlink" title="整体流程图"></a>整体流程图</h2><p><img src="/images/image-20190729171250162.png" alt></p>
-<p>上图中从左到右分别为步骤1-4，其中步骤4是神经网络，其实不重要，重要的是前3步，第4步可以是其他节点。</p>
-<h2 id="选择案例数据"><a href="#选择案例数据" class="headerlink" title="选择案例数据"></a>选择案例数据</h2><p><img src="/images/image-20190729171524119.png" alt></p>
-<p>插入<code>Input Data Source</code> 节点，选择<code>SAMPSIO.HMEQ</code>作为源数据，并点<code>Change</code>钩上<code>Use complete data as sample</code>选择全部数据用作后续操作。</p>
-<h2 id="设置训练、验证数据比例"><a href="#设置训练、验证数据比例" class="headerlink" title="设置训练、验证数据比例"></a>设置训练、验证数据比例</h2><p><img src="/images/image-20190729172417734.png" alt></p>
-<p>训练：67%，验证：33%</p>
-<h2 id="决策树设置"><a href="#决策树设置" class="headerlink" title="决策树设置"></a>决策树设置</h2><p><img src="/images/image-20190729172732498.png" alt></p>
-<p>打开决策树设置，唯一要更改的是上图中圈红的地方，从0改成2（备选规则存储）。</p>
-<p>然后关闭后运行决策树，运行结束后右键查看决策树结果：</p>
-<p><img src="/images/image-20190729170941079.png" alt></p>
-<p>在<code>Score</code>页面中子页面<code>Variable Selection</code>中可以看到变量的重要性排序。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>好处是先把作用不大的变量直接筛选掉，跟在这个决策树后面的节点默认会排除掉决策树中已经<code>rejected</code>的变量。</p>
-<p>如果变量特别多的时候，这种方法特别有效。</p>
+                <h2 id="《西游记》里的政治隐喻"><a href="#《西游记》里的政治隐喻" class="headerlink" title="《西游记》里的政治隐喻"></a>《西游记》里的政治隐喻</h2><p>《西游记》是大家耳熟能详喜闻乐见的古典名著，上到耄耋老人，下到懵懂孩童，都会或多或少的对师徒四人西天取经的故事有所了解。这样一部尽人皆知的著作，对它的解读也是五花八门，一千个读者心中有一千个哈姆雷特，一万个中国人心中有一万个猪八戒。</p>
+<p>这些解读中颇为有趣的，是一些关于西游记当中有关政治隐喻的解读，让读者感受到，原来这样一部颇具浪漫主义色彩的史诗神话，同样也有着勾心斗角的权力斗争，同样包含着对现实世界的辛辣讽刺。</p>
+<p><strong>取经本身便是一项镀金工程</strong></p>
+<p>有这样一种说法评价整个西游记的故事：《西游记》是一个佛界利用唐僧钓鱼执法，大力清除道家势力的政治斗争大戏。整个故事就是展现佛道两家势力明争暗斗的，其激烈程度不输《甄嬛传》 。</p>
+<p>而唐僧的取经也就被看做是佛界势力为金蝉子成佛镀金，并吸收孙悟空八戒等人才的举措。不经历苦难就随随便便成佛，即便是佛祖的爱徒也是说不过去的，取经之行也便成了成佛的一种走过场。苦难虽然是有的，但佛祖早已安排好了猴子专程护送，还有各种菩萨答疑解惑，基本上不会有性命之忧。</p>
+<p>一路清扫的妖怪，有背景的全都牵出背后靠山，起到敲山震虎之用，没有背景的小妖也基本都是一棍子打死了事了。</p>
+<p>一旦接受了这种西游记是一部反映政治斗争大戏的设定，再回头重温它的各种情节，便有了一种《权力的游戏》、《纸牌屋》的即视感，取经也就变成了为“佛——菩萨——罗汉”这种编制而奋斗的过程。</p>
+<p><strong>真假美猴王是什么鬼？</strong></p>
+<p>如果说唐僧的成佛之路是内定，取经是所谓的镀金工程，那么孙悟空的成佛完全是靠自己的实力与计谋争取来的。在西游记整个故事中，真假美猴王这一篇是最为奇妙的，这个所谓六耳猕猴的妖怪行事最为诡异，他的目标并不像其他妖怪或想吃唐僧肉或出于其他恩怨报复，他在打晕唐僧之后居然冒充起了取经四人组想要自己取得真经。于是便有了一些阴谋论的观点：如来借真假美猴王的契机，消灭了真正的孙悟空，让自己的人顶上空缺，以除后患。其实这种说法并不站得住，既然早有六耳猕猴这样的人选，干嘛还要让唐僧去揭了五指山封印，放出那只惹事的猴子呢？一直压在下面也不是不可以。</p>
+<p>其实这不过是孙悟空的一个把戏，哪有什么六耳猕猴，只不过是他的分身罢了。在真假美猴王事件之前，孙悟空和唐僧之间就有了不小的矛盾积压，唐僧更是决意赶走悟空。这种情况下悟空心里自知不使出些招数是不行了，于是便心一横弄个分身，一棒子打晕唐僧，解了心头之气。后面一如大家都知道的故事发展，不管是念紧箍咒，还是照妖镜，都不能分辨出真假。地府的谛听倒是辨出了事情的真相，但是却不敢说出，它如果当中戳穿了齐天大圣的把戏，那猴子还不扒了他的皮。最后闹到了如来那里，悟空便恳请如来为弟子辨明邪正，注意是邪正而不是真假，猴子自知骗不过如来，问邪正便是问自己这么做对不对，请如来做个公断。如来虽看穿了悟空的把戏，却不能戳穿这个事情，便和悟空一起演了下去，编出六耳猕猴的故事，圆了这个谎。这也解释了为什么其他人从未听说过六耳猕猴这等妖怪。而如来也答应悟空“那时功成归极乐，汝亦坐莲台”，给了大圣编制的应允，之后大圣就安心的护送唐僧，再也没有生出内部矛盾的事端。</p>
+<p>也有一种可能是六耳猕猴是悟空恶念的化身，经此一劫悟空便心无杂念一心向佛，这点倒是颇像龙珠里面的比克大魔王。</p>
+<p><strong>沙僧是佛教势力的间谍？</strong></p>
+<p>沙僧在西游记中的戏份不多，却是一个很复杂的人物。沙僧被贬流沙河，获罪是因为“失手打碎了琉璃盏”，这是多么莫名其妙的罪名！不仅如此，他受到的惩罚不仅仅包括贬落凡间，还包括每月一次利刃穿身，一副玉帝对他恨之入骨的表现。</p>
+<p>沙僧的职位是卷帘大将，这是一个很敏感的职位，应该在宫廷之中工作的，接触到宫廷秘闻的机会很大。因此，“失手打碎了琉璃盏”很有可能只是一个为了掩盖事实的官方说法，其真实的罪名是发现了玉帝的某些隐秘，导致玉帝恼羞成怒。</p>
+<p>更大胆的猜测一下，他是西天潜入天庭的间谍，暴露了身份后，以打破琉璃盏的罪名狠狠惩戒。而后西天便以取经为名将沙僧捞了出来，为沙僧洗白，于是沙僧知趣的低调走完这一程，最后获得了金身罗汉的封号，也算是功德圆满。</p>
+<p><strong>八戒的私心</strong></p>
+<p>在取经的路上，最不情愿的就是猪八戒了，除了八戒生性好吃懒做这个原因，更重要的是八戒并不情愿被西天吸收，还抱有官复原职的心思。</p>
+<p>大家都知道，八戒的原职是天蓬元帅，掌管天河水军，是天庭海军总司令，官职不知比沙僧高出多少。八戒的被贬纯属是因为调戏了不该调戏之人——嫦娥，才会落得如此下场，但是等风头一过，说不定会有老同事卖面子帮老猪一把，官复原职都是有可能的。而西天看中了八戒的才华（毕竟曾经是海军总司令，没点金刚钻是不能揽这瓷器活的），想要借助取经之名，吸收八戒为自己这边出力。在这种情况下，八戒的取经之行自是不情愿的，在去往西天的路上，八戒也是数次提及要散伙，自己回高老庄过日子去，可见其对于西方势力的拉拢并不太感冒，有机会还是要回去等着玉帝开恩把他捞回天庭。</p>
+<p>当然，取经路上的种种表现，也让西天逐渐明白了一点，八戒这个人才干是有的，心性就差了一点，不能独当一面，只能作为技术性人才做专门工作，于是便有了净坛使者。</p>
+<p>所谓著作，能够让不同的人在读的时候品味出不同的感受，孩子看它便是神话故事，热血青年看它便是讽刺现实针砭时弊，政治家看它便是佛道两家的天下之争。《西游记》便做到了这一点。</p>
 
             </div>
             <hr/>
@@ -400,9 +398,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《SAS中如何通过决策树选择重要入选变量》
+                    《西游记的政治隐喻》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/29/how-sas-em-select-important-variables-by-decision-tree/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/12/06/xiyoujidzhengzhi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 KevinZhang
             </a> 采用
@@ -464,17 +462,68 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/05/github-trending-and-good-stuff-2019-08-05/">
+                <a href="/2019/12/06/xiyoujidzhengzhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-05">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="西游记的政治隐喻">
                         
-                        <span class="card-title">Github Trending and Good Stuff 2019-08-05</span>
+                        <span class="card-title">西游记的政治隐喻</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            《西游记》里的政治隐喻《西游记》是大家耳熟能详喜闻乐见的古典名著，上到耄耋老人，下到懵懂孩童，都会或多或少的对师徒四人西天取经的故事有所了解。这样一部尽人皆知的著作，对它的解读也是五花八门，一千个读者心中有一千个哈姆雷特，一万个中国人心中有
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            KevinZhang
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/政治/" target="_blank">
+                        <span class="chip bg-color">政治</span>
+                    </a>
+                    
+                    <a href="/tags/西游记/" target="_blank">
+                        <span class="chip bg-color">西游记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/08/19/github-trending-and-good-stuff-2019-08-19/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-19">
+                        
+                        <span class="card-title">Github Trending and Good Stuff 2019-08-19</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -484,9 +533,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -516,58 +565,6 @@
                     
                     <a href="/tags/相关材料/" target="_blank">
                         <span class="chip bg-color">相关材料</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/07/25/an-excel-machine-learning-approach-for-score-modeing/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="使用Excel建立机器学习评分模型">
-                        
-                        <span class="card-title">使用Excel建立机器学习评分模型</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            使用Excel建立机器学习评分模型准备写一份材料关于《使用Excel建立机器学习评分模型》，成型的Excel模板已经有了（笔者自己开发的），具体的一些效果截屏见文末。就是不知道有多少人愿意了解？
-以下是材料大纲：
-为什么使用Excel
-Ex
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            KevinZhang
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/machine-learning/" target="_blank">
-                        <span class="chip bg-color">machine learning</span>
-                    </a>
-                    
-                    <a href="/tags/机器学习/" target="_blank">
-                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
                 </div>
