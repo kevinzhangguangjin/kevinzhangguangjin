@@ -4,10 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="西游记的政治隐喻, machine learning, 机器学习, modeling, 建模, scoring, 评分">
-    <meta name="description" content="《西游记》里的政治隐喻作者 王不留行 刊登于《华声》2015年10期 
-本文转载自「葫芦时刻畅读会员」
-《西游记》是大家耳熟能详喜闻乐见的古典名著，上到耄耋老人，下到懵懂孩童，都会或多或少的对师徒四人西天取经的故事有所了解。这样一部尽人皆知">
+    <meta name="keywords" content="白话评分卡 - 数据准备与分箱, machine learning, 机器学习, modeling, 建模, scoring, 评分">
+    <meta name="description" content="“深扒术语不装逼，实战真知变牛逼。”
+传统评分模型开发大致可以分为以下几个步骤：
+准备模型数据
+分箱 - Binning 
+分箱后变量对模型贡献的评价 - WOE、IV
+建模 - Logistic Regression
+模型稳定度 - PS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>西游记的政治隐喻 | KevinZhang&#39;s Blog</title>
+    <title>白话评分卡 - 数据准备与分箱 | KevinZhang&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -194,13 +198,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        西游记的政治隐喻
+                        白话评分卡 - 数据准备与分箱
                     </div>
                 </div>
             </div>
@@ -311,12 +315,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/政治/" target="_blank">
-                                <span class="chip bg-color">政治</span>
+                            <a href="/tags/machine-learning/" target="_blank">
+                                <span class="chip bg-color">machine learning</span>
                             </a>
                         
-                            <a href="/tags/西游记/" target="_blank">
-                                <span class="chip bg-color">西游记</span>
+                            <a href="/tags/机器学习/" target="_blank">
+                                <span class="chip bg-color">机器学习</span>
+                            </a>
+                        
+                            <a href="/tags/scorecard/" target="_blank">
+                                <span class="chip bg-color">scorecard</span>
+                            </a>
+                        
+                            <a href="/tags/评分卡/" target="_blank">
+                                <span class="chip bg-color">评分卡</span>
                             </a>
                         
                     </div>
@@ -330,7 +342,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-06
+                    2019-12-17
                 </div>
 
                 
@@ -346,28 +358,90 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="《西游记》里的政治隐喻"><a href="#《西游记》里的政治隐喻" class="headerlink" title="《西游记》里的政治隐喻"></a>《西游记》里的政治隐喻</h2><p><u>作者 王不留行 刊登于《华声》2015年10期</u> </p>
-<p><u>本文转载自「葫芦时刻畅读会员」</u></p>
-<p>《西游记》是大家耳熟能详喜闻乐见的古典名著，上到耄耋老人，下到懵懂孩童，都会或多或少的对师徒四人西天取经的故事有所了解。这样一部尽人皆知的著作，对它的解读也是五花八门，一千个读者心中有一千个哈姆雷特，一万个中国人心中有一万个猪八戒。</p>
-<p>这些解读中颇为有趣的，是一些关于西游记当中有关政治隐喻的解读，让读者感受到，原来这样一部颇具浪漫主义色彩的史诗神话，同样也有着勾心斗角的权力斗争，同样包含着对现实世界的辛辣讽刺。</p>
-<p><strong>取经本身便是一项镀金工程</strong></p>
-<p>有这样一种说法评价整个西游记的故事：《西游记》是一个佛界利用唐僧钓鱼执法，大力清除道家势力的政治斗争大戏。整个故事就是展现佛道两家势力明争暗斗的，其激烈程度不输《甄嬛传》 。</p>
-<p>而唐僧的取经也就被看做是佛界势力为金蝉子成佛镀金，并吸收孙悟空八戒等人才的举措。不经历苦难就随随便便成佛，即便是佛祖的爱徒也是说不过去的，取经之行也便成了成佛的一种走过场。苦难虽然是有的，但佛祖早已安排好了猴子专程护送，还有各种菩萨答疑解惑，基本上不会有性命之忧。</p>
-<p>一路清扫的妖怪，有背景的全都牵出背后靠山，起到敲山震虎之用，没有背景的小妖也基本都是一棍子打死了事了。</p>
-<p>一旦接受了这种西游记是一部反映政治斗争大戏的设定，再回头重温它的各种情节，便有了一种《权力的游戏》、《纸牌屋》的即视感，取经也就变成了为“佛——菩萨——罗汉”这种编制而奋斗的过程。</p>
-<p><strong>真假美猴王是什么鬼？</strong></p>
-<p>如果说唐僧的成佛之路是内定，取经是所谓的镀金工程，那么孙悟空的成佛完全是靠自己的实力与计谋争取来的。在西游记整个故事中，真假美猴王这一篇是最为奇妙的，这个所谓六耳猕猴的妖怪行事最为诡异，他的目标并不像其他妖怪或想吃唐僧肉或出于其他恩怨报复，他在打晕唐僧之后居然冒充起了取经四人组想要自己取得真经。于是便有了一些阴谋论的观点：如来借真假美猴王的契机，消灭了真正的孙悟空，让自己的人顶上空缺，以除后患。其实这种说法并不站得住，既然早有六耳猕猴这样的人选，干嘛还要让唐僧去揭了五指山封印，放出那只惹事的猴子呢？一直压在下面也不是不可以。</p>
-<p>其实这不过是孙悟空的一个把戏，哪有什么六耳猕猴，只不过是他的分身罢了。在真假美猴王事件之前，孙悟空和唐僧之间就有了不小的矛盾积压，唐僧更是决意赶走悟空。这种情况下悟空心里自知不使出些招数是不行了，于是便心一横弄个分身，一棒子打晕唐僧，解了心头之气。后面一如大家都知道的故事发展，不管是念紧箍咒，还是照妖镜，都不能分辨出真假。地府的谛听倒是辨出了事情的真相，但是却不敢说出，它如果当中戳穿了齐天大圣的把戏，那猴子还不扒了他的皮。最后闹到了如来那里，悟空便恳请如来为弟子辨明邪正，注意是邪正而不是真假，猴子自知骗不过如来，问邪正便是问自己这么做对不对，请如来做个公断。如来虽看穿了悟空的把戏，却不能戳穿这个事情，便和悟空一起演了下去，编出六耳猕猴的故事，圆了这个谎。这也解释了为什么其他人从未听说过六耳猕猴这等妖怪。而如来也答应悟空“那时功成归极乐，汝亦坐莲台”，给了大圣编制的应允，之后大圣就安心的护送唐僧，再也没有生出内部矛盾的事端。</p>
-<p>也有一种可能是六耳猕猴是悟空恶念的化身，经此一劫悟空便心无杂念一心向佛，这点倒是颇像龙珠里面的比克大魔王。</p>
-<p><strong>沙僧是佛教势力的间谍？</strong></p>
-<p>沙僧在西游记中的戏份不多，却是一个很复杂的人物。沙僧被贬流沙河，获罪是因为“失手打碎了琉璃盏”，这是多么莫名其妙的罪名！不仅如此，他受到的惩罚不仅仅包括贬落凡间，还包括每月一次利刃穿身，一副玉帝对他恨之入骨的表现。</p>
-<p>沙僧的职位是卷帘大将，这是一个很敏感的职位，应该在宫廷之中工作的，接触到宫廷秘闻的机会很大。因此，“失手打碎了琉璃盏”很有可能只是一个为了掩盖事实的官方说法，其真实的罪名是发现了玉帝的某些隐秘，导致玉帝恼羞成怒。</p>
-<p>更大胆的猜测一下，他是西天潜入天庭的间谍，暴露了身份后，以打破琉璃盏的罪名狠狠惩戒。而后西天便以取经为名将沙僧捞了出来，为沙僧洗白，于是沙僧知趣的低调走完这一程，最后获得了金身罗汉的封号，也算是功德圆满。</p>
-<p><strong>八戒的私心</strong></p>
-<p>在取经的路上，最不情愿的就是猪八戒了，除了八戒生性好吃懒做这个原因，更重要的是八戒并不情愿被西天吸收，还抱有官复原职的心思。</p>
-<p>大家都知道，八戒的原职是天蓬元帅，掌管天河水军，是天庭海军总司令，官职不知比沙僧高出多少。八戒的被贬纯属是因为调戏了不该调戏之人——嫦娥，才会落得如此下场，但是等风头一过，说不定会有老同事卖面子帮老猪一把，官复原职都是有可能的。而西天看中了八戒的才华（毕竟曾经是海军总司令，没点金刚钻是不能揽这瓷器活的），想要借助取经之名，吸收八戒为自己这边出力。在这种情况下，八戒的取经之行自是不情愿的，在去往西天的路上，八戒也是数次提及要散伙，自己回高老庄过日子去，可见其对于西方势力的拉拢并不太感冒，有机会还是要回去等着玉帝开恩把他捞回天庭。</p>
-<p>当然，取经路上的种种表现，也让西天逐渐明白了一点，八戒这个人才干是有的，心性就差了一点，不能独当一面，只能作为技术性人才做专门工作，于是便有了净坛使者。</p>
-<p>所谓著作，能够让不同的人在读的时候品味出不同的感受，孩子看它便是神话故事，热血青年看它便是讽刺现实针砭时弊，政治家看它便是佛道两家的天下之争。《西游记》便做到了这一点。</p>
+                <p><strong>“深扒术语不装逼，实战真知变牛逼。”</strong></p>
+<h3 id="传统评分模型开发大致可以分为以下几个步骤："><a href="#传统评分模型开发大致可以分为以下几个步骤：" class="headerlink" title="传统评分模型开发大致可以分为以下几个步骤："></a>传统评分模型开发大致可以分为以下几个步骤：</h3><ul>
+<li>准备模型数据</li>
+<li>分箱 - Binning </li>
+<li>分箱后变量对模型贡献的评价 - WOE、IV</li>
+<li>建模 - Logistic Regression</li>
+<li>模型稳定度 - PSI</li>
+</ul>
+<p>本篇文章主要讲前两个：模型数据准备和分箱。</p>
+<p>什么叫模型数据？评分卡模型需要准备什么样的数据？<br>数据采集之后，一般以数据库的形式记录下来。做模型的样本数据，需要把每一个贷款人形成一条记录。也就是说每一行就是一个贷款人的所有相关的信息。</p>
+<p>我们说的评分卡数据一般是对借款人或者是贷款人，违约风险的一个量化的预测。<br><strong>再白话一点就是：借钱给一个人之后，有多大的概率会不还钱。</strong></p>
+<h3 id="那么模型数据大概会包括哪些方面呢？"><a href="#那么模型数据大概会包括哪些方面呢？" class="headerlink" title="那么模型数据大概会包括哪些方面呢？"></a>那么模型数据大概会包括哪些方面呢？</h3><p>比方说央行的征信数据，是所有银行以及持牌金融机构，被强制要求上报的数据。这些数据基本与借贷高度相关。目前央行的征信数据还包括了公共事业的信息，接下来涵盖面会越来越广。所以能够使用央行的征信数据来做预测，是非常好的一件事情。</p>
+<p>上篇文章中案例里的数据也属于一个代表的典型。有借款人的基本信息，贷款用途、负债情况，财富收入情况等等信息。每一个方面都会有体现为一个或者多个字段来代表。</p>
+<p><strong>那么什么叫字段？或者说变量？</strong><br><strong>字段或者变量就是有明确含义的，具体信息，采用数字或者文本的形式进行记录。</strong><br>通常情况下，字段 = 变量 = 列。</p>
+<p>比方说，有个字段叫做年龄。那么这个字段/变量/列是指每个用户具体的年龄，存储的方式是数字。由于每个用户的年龄肯定不会是完全一样的，所以就叫做变量。变量就是说可变的量，不管是数字还是文本。</p>
+<p>再举个例子，比方说城市，那么城市肯定是以文本的形式进行存储。</p>
+<p><strong>变量的类型大体可以粗分为两类。一类是数字，另一类是文本。</strong></p>
+<p>大家不要嫌我啰嗦，因为这个基础概念非常重要，接下来讲的是，所有的统计模型不管是我们在讲的这个案例，还是其他的机器学习或者是建模，都会要处理这两种类型的变量。</p>
+<p>处理不同类型的变量一定会涉及到一个问题，就是处理完的变量，是一个什么形式？<br>为什么这么说呢？如果处理完的形式不统一，或者说量纲不统一，模型是没有办法做下去的。</p>
+<p>举个例子，一斤米和10本书，不管是数量单位，还是东西本身都是没有办法比较的。那么可以想象到的一个对比方式是什么呢？一斤米多少钱？10本书多少钱？从这个角度讲，折换成钱之后一斤米和10本书就可以在货币的角度进行比较。</p>
+<p>再举个例子，100个男生和100个女生，虽然都是100个人，但是他们的风险水平肯定是不一样的。<strong>这就需要转换成统一的量纲，把量纲单位不一样的事物能统一能够进行比较。</strong></p>
+<p>接下来引出下一个概念就是，</p>
+<h3 id="为什么需要分箱？"><a href="#为什么需要分箱？" class="headerlink" title="为什么需要分箱？"></a><strong>为什么需要分箱？</strong></h3><blockquote>
+<p>在传统的建模模型里，首先要在形式上统一数字变量和文本变量。可以想象到的方式就是把数字变量和文本变量都处理成分类变量。</p>
+</blockquote>
+<p>什么是分类变量呢？表现形式就是文本。<br>比方说城市，城市可以怎么分类呢？比如说一线城市二线城市等等。数字型的变量怎么分类呢？比如说20多岁，那就可以分在20-30岁这个区间段，30多岁可以分在30-40岁这个区间段，那么表现形式也是文本，这就是所谓的分类变量。</p>
+<p><strong>再简单点说，分箱对于数字变量就是分段，对于文本变量就是合并。</strong></p>
+<p>分箱的合并，或者分段，都是基于统计学的算法来计算的，分段出来的情况，人类并不一定能完全理解为什么，这个时候一定要加入一定的业务输入。</p>
+<p>比方说年龄好了，10岁或5岁分段都可以，但有时候会看到，18-22会是一个特殊的分段，因为这段时间，很可能就是大学生念书的时间，所以要有一个业务的解释。<br>你不能分出来假设说21~27，这个分段可能是根据数据分出来的，但是对于业务人员来说，这是很难理解的。他们只能理解到刚才讲的，5岁或者10岁，还有特殊一点的，23岁。其他的分法可能就无法理解为什么了。</p>
+<p>所以在数据表现允许的情况下，尽可能结合业务知识进行分段。</p>
+<p>传统的评分模型，首先在变量的处理上，用分段、合并的方式变成了文本。这是形式上的统一，当然会有后续的作用。</p>
+<p>也有些算法模型，处理方式是反过来的，也就是把文本处理成数字，比方说XGboost。XGboost是文本变成数字，然后用矩阵的方式进行处理。</p>
+<p>不管是哪一种，都会在形式上先统一，要么处理成文本，要么处理成数字。</p>
+<p>如何分箱，其实有不同的算法，常见的有决策树（tree）、 卡方（ChiMerge）。具体的算法这里不展开说，大家先有个印象。</p>
+<p>OK，处理成文本有什么好处呢？接下来就会引入下一个概念，就是分箱之后，如何去评价变量的有效性。</p>
+<blockquote>
+<p>许多的文章中讲的术语：“离散化”，就是我们刚才讲的这个过程。所以为什么术语难懂，一定要用大白话来讲清楚。</p>
+</blockquote>
+<h3 id="WOE和IV"><a href="#WOE和IV" class="headerlink" title="WOE和IV"></a><strong>WOE和IV</strong></h3><p>首先记住这两个单词。</p>
+<blockquote>
+<p>每一个字母你都认识，但是合起来你就不知道它的意思，这就是术语。</p>
+</blockquote>
+<p>这两个是需要计算的衡量指标。对于二分类模型，这两个指标的意义非常重要。</p>
+<p>刚才又讲了一个术语，叫做二分类模型。什么叫二分类模型呢？</p>
+<blockquote>
+<p>目标变量y，只有两个值，比方说0或者1。那么在示例里边1代表坏用户，0代表好用户。</p>
+</blockquote>
+<p>这里再稍微啰嗦一下，在建模数据的准备阶段。好和坏用户的定义非常重要。尤其要注意的是，不能是非坏即好，在下一个章节里边会专门讲。</p>
+<p>两个指标的公式在网上很多地方都能够搜得到，不展开讲。我们只讲有什么作用。</p>
+<p>WOE是看分箱之后变量中不同分组呈现出来的数据指标的单调性。</p>
+<p>什么是单调性呢？就是说WOE指标通过不同分箱画出来之后，是否呈一条直线。比如下图：<br><img src="/images/1240.png" alt></p>
+<p><strong>为什么要成一条直线呢？因为理论上传统评分模型其实概念上是在做线性回归。</strong></p>
+<p>这条线要尽可能陡峭，不管是前低后高，或者是前高后低，越陡峭越好。如果画出来比较水平的直线，那说明这个变量对于模型的贡献很低，也就是对于好坏用户的区分能力一般。</p>
+<p>这么讲还是有点抽象，讲个具体的例子吧。<br>举个例子，比如说，我们把年龄切成5段，然后发现年龄越大的人，他的违约的概率越小。那么你就可以直接把年龄段和对应的违约化成如下图，它就是一条直线：<br><img src="/images/1241.png" alt><br>（上图并没有完全是一条直线，姑且这么看吧）</p>
+<p><strong>在WOE的计算里边需要引入了一个概念：Odds。这个词的意思代表坏客户的占比除以好客户的占比。</strong>某些特殊的软件比如SAS，专门说了叫Good Bad Odds，也就是反过来，好客户的占比除以坏客户的占比。</p>
+<p>比如某个年龄段，好人占了80%，坏人占了20%（因为是二分类模型，目标变量只有这两种情况）。所以：</p>
+<ul>
+<li>Odds：20%÷80% = 0.25</li>
+<li>Good Bad Odds：80%÷20% = 4</li>
+</ul>
+<p>然后对除出来的比例，进行对数转换，对数转换是以自然对数为底数的。</p>
+<p>为什么要以自然对数为底数，为什么要做对数转换？这个在后续的章节里边讲。</p>
+<p><strong>目前大家只需要知道，画这个图的目的就是尽量弄成直线，直线越陡说明区分能力越强。</strong></p>
+<p>在实际操作里边WOE能完全成直线的，是比较难见到的。通常可以接受的，比如说是一个U型或者是一个倒U型的结构，这种结构，我们可以通过简单的数学变换进行处理，也就是把它掰直，怎么掰直呢？后续章节会讲。</p>
+<p>但是一定不能接受的就是类似心电图这样的表现，没有办法掰直了，从实际上讲心电图变量代表趋势不明确，不能放入线性模型。</p>
+<p>直线越陡峭说明变量区分能力越强，如何定量的描述变量的强度？就引入了IV值。</p>
+<p><strong>什么是IV值？</strong><br><strong>全称是Information Value，也就是信息价值的意思。</strong></p>
+<p>IV值的计算在全网也有不少的介绍。通过一个数学量化的方式来体现变量分箱之后整个变量的强弱程度。具体这个变量有多强有多弱，可以参考以下：</p>
+<ul>
+<li>IV&lt; 0.02 ， 没有预测能力</li>
+<li>0.02 &lt;= IV &lt;0.1, 预测能力弱</li>
+<li>0.1   &lt;= IV &lt;0.3, 预测能力中</li>
+<li>IV &gt;= 0.3, 预测能力强</li>
+</ul>
+<p>IV的数字越大就说明变量的强度越大。<br>但是物极必反嘛，如果大于0.5，那要考虑这个变量是不是<strong>过于强</strong>了。<br>有同学会不理解，强不好吗？<br>太强的变量，会导致其他变量很难进入模型，因为其他的变量相对太弱了，就会变得不需要了。<br>还是会有同学不理解说，用最少的变量就能做好模型，不是挺好的吗？<br>因为模型还是要服务业务，业务需要稳定。<strong>如果只有少数的变量，相当于所有鸡蛋都放在少数的篮子里面，当这些少数的信息出现问题的情况下，就没有其他的信息可以做判断了。</strong><br>再说得简单些，如果入选的变量，都能在0.1~0.3，是比较好的，说明变量也都比较强，变量最好是涵盖不同方面的，这样你的模型就会稳定而且精确度高。<br>在之前的示例里边，默认的筛选的IV值，设置的是0.02。也就是说变量IV值需要大于0.02，才被选入作为模型的入参变量。</p>
+<p>好的，这篇我们稍微做个总结：</p>
+<ul>
+<li>数据信息体现在变量/字段/列，粗分为数字变量和文本变量。</li>
+<li>传统模型要对变量进行转换，需要转换成文本分类变量。</li>
+<li>把数字或者文本变量转换成分类文本变量的过程，叫做分箱。</li>
+<li>分箱之后可以通过WOE来看图像的单调性，图像越单调，越陡峭，说明变量的区分能力很好。</li>
+<li>具体区分能力的量化值可以通过IV值的计算体现。</li>
+</ul>
+<p>以上是本期的内容，谢谢啦。</p>
 
             </div>
             <hr/>
@@ -402,9 +476,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《西游记的政治隐喻》
+                    《白话评分卡 - 数据准备与分箱》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/12/06/xiyoujidzhengzhi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/12/17/scorecard-data-preparation-binning/" property="cc:attributionName"
                rel="cc:attributionURL">
                 KevinZhang
             </a> 采用
@@ -466,9 +540,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/12/17/scorecard-data-preparation-binning/">
                     <div class="card-image">
@@ -492,9 +567,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -503,6 +578,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -533,24 +609,26 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/19/github-trending-and-good-stuff-2019-08-19/">
+                <a href="/2019/12/06/xiyoujidzhengzhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Github Trending and Good Stuff 2019-08-19">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="西游记的政治隐喻">
                         
-                        <span class="card-title">Github Trending and Good Stuff 2019-08-19</span>
+                        <span class="card-title">西游记的政治隐喻</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            jupyter-notebookjakevdp / PythonDataScienceHandbookPython Data Science Handbook: full text in Jupyter Notebooks  Good St
+                            《西游记》里的政治隐喻作者 王不留行 刊登于《华声》2015年10期 
+本文转载自「葫芦时刻畅读会员」
+《西游记》是大家耳熟能详喜闻乐见的古典名著，上到耄耋老人，下到懵懂孩童，都会或多或少的对师徒四人西天取经的故事有所了解。这样一部尽人皆知
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-19
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-06
                             </span>
                         <span class="publish-author">
                             
@@ -563,24 +641,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/machine-learning/" target="_blank">
-                        <span class="chip bg-color">machine learning</span>
+                    <a href="/tags/政治/" target="_blank">
+                        <span class="chip bg-color">政治</span>
                     </a>
                     
-                    <a href="/tags/机器学习/" target="_blank">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/tags/Github-Trending/" target="_blank">
-                        <span class="chip bg-color">Github Trending</span>
-                    </a>
-                    
-                    <a href="/tags/good-stuff/" target="_blank">
-                        <span class="chip bg-color">good stuff</span>
-                    </a>
-                    
-                    <a href="/tags/相关材料/" target="_blank">
-                        <span class="chip bg-color">相关材料</span>
+                    <a href="/tags/西游记/" target="_blank">
+                        <span class="chip bg-color">西游记</span>
                     </a>
                     
                 </div>
